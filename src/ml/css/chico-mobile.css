@@ -6,10 +6,11 @@ body {
 	max-width: 1230px;
 	margin: 0 auto;
 	position: relative;
+	padding: 0 10px;
 }
 
 .ch-layout {
-	padding: 0 10px;
+
 }
 
 .ch-footer {
@@ -109,11 +110,11 @@ img {
 
 .ch-header dl,
 .ch-header dd {
-	margin: 0 5px;
+	margin: 0 auto;
 }
 
 .ch-header dl {
-	margin-top: 18px;
+	margin-top: 12px;
 }
 
 .ch-header dt {
