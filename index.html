@@ -1,0 +1,155 @@
+<!doctype html>
+<!-- Conditional comment for mobile ie7 http://blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]> <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Home Mobile</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="MercadoLibre">
+	
+	<!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+	<meta name="HandheldFriendly" content="True">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta http-equiv="cleartype" content="on">
+	
+	<link rel="stylesheet" href="src/ml/css/normalize.css">
+
+	<link rel="stylesheet" href="src/ml/css/chico-mobile.css" />
+
+	<!-- Active for phones -->
+	<link rel="stylesheet" media="only screen and (min-width: 240px)" href="src/ml/css/mobile.css" />
+	<!-- Active for tablets -->
+	<link rel="stylesheet" media="only screen and (min-width: 768px)" href="src/ml/css/tablet.css">
+
+</head>
+
+<body>
+    <header class="ch-header">
+		<h1 class="ch-logo">
+			<img alt="MercadoLibre" src="src/ml/assets/logo.png" />
+		</h1>
+
+		<menu>
+			<li class="ch-search ch-selected"><a class="ch-ico" href="#search">Buscar</a></li>
+			<li class="ch-favs"><a class="ch-ico" href="#favorites">Favoritos</a></li>
+			<li class="ch-nav"><a class="ch-ico" href="#navigation">Menú</a></li>
+		</menu>
+		
+		<dl>
+			<dt>Buscar</dt>
+			<dd id="search">
+				<form class="ch-form ch-form-search ch-box" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
+					<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
+					<input type="submit" value="Buscar" class="ch-btn ch-secondary" accesskey="b">
+				</form>
+				<!--p class="sell">
+					<a rel="nofollow" class="ch-btn ch-secondary" href="#">Vender</a>
+				</p-->
+			</dd>
+			<dt>Favoritos</dt>
+			<dd id="favorites" class="ch-hide">
+				<div class="favorites ch-box">
+					<ul class="list">
+						<li>
+							<p class="image">
+								<a href="#" title="Ipod touch">
+									<img src="http://img2.mlstatic.com/s_MLA_v_I_f_102594247_9098.jpg" height="50" width="50">
+								</a>
+							</p>
+							<p class="title">
+								<a href="#" title="Ipod touch">Ipod touch de 8Gb 4t Generación</a>
+							</p>
+							<p class="price">
+								$ 1.399 <sup>00</sup>
+							</p>
+						</li>
+					</ul> <!-- This is hiden list of items favorites -->
+					<p class="navigation">
+						<a class="prev" href="#" title="Anterior">Anterior</a>
+						<a class="next" href="#" title="Siguiente">Siguiente</a>
+					</p>
+				</div>
+			</dd>
+			<dt>Menu</dt>
+			<dd id="navigation" class="ch-hide">
+				<nav class="ch-menu ch-box" role="navigation">
+					<ul>
+						<li><a href="#">Registrate</a></li>
+						<li><a href="#">Ingresar</a></li>
+						<li><a href="#">Mi cuenta</a></li>
+						<li><a href="#">Ayuda</a></li>
+					</ul>
+				</nav>
+			</dd>
+		</dl>
+	</header>
+	
+	<div class="ch-layout" role="main">
+
+		<h2>Clasificados</h2>
+		<nav>
+			<ul class="ch-list">
+		        <li><a href="http://vehiculos-home.mercadolibre.com.ar/" data-categ-id="1743">Autos, Motos y Otros</a></li>
+		        <li><a href="http://inmuebles-home.mercadolibre.com.ar/" data-categ-id="1459">Inmuebles</a></li>
+		        <li><a href="http://servicios-home.mercadolibre.com.ar/" data-categ-id="1540">Servicios</a></li>
+			</ul>
+		</nav>
+
+		<h2>Categorías</h2>
+		<nav>
+			<ul class="ch-list">
+				<li><a href="http://home.mercadolibre.com.ar/vehiculos-accesorios/" data-categ-id="5725">Accesorios para Vehículos</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/animales-y-mascotas/" data-categ-id="1071">Animales y Mascotas</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/antiguedades/" data-categ-id="1367">Antigüedades</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/bebes/" data-categ-id="1384">Bebés</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/fotografia-camaras-y-accesorios/" data-categ-id="1039">Cámaras y Accesorios</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/telefonia/" data-categ-id="1051">Celulares y Telefonía</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/coleccionables/" data-categ-id="1798">Coleccionables y Hobbies</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/computacion/" data-categ-id="1648">Computación</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/videojuegos/" data-categ-id="1144">Consolas y Videojuegos</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/deportes-fitness/" data-categ-id="1276">Deportes y Fitness</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/electrodomesticos/" data-categ-id="5726">Electrodomésticos y Aires Ac.</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/electronica/" data-categ-id="1000">Electrónica, Audio y Video</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/entradas-eventos/" data-categ-id="2547">Entradas para Eventos</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/hogar-muebles/" data-categ-id="1574">Hogar, Muebles y Jardín</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/ropa/" data-categ-id="1430">Indumentaria y Accesorios</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/industrias-oficinas/" data-categ-id="1499">Industrias y Oficinas</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/instrumentos-musicales/" data-categ-id="1182">Instrumentos Musicales</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/joyas-relojes/" data-categ-id="3937">Joyas y Relojes</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/juegos-juguetes/" data-categ-id="1132">Juegos y Juguetes</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/libros-revistas-comics/" data-categ-id="3025">Libros, Revistas y Comics</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/musica-peliculas-series/" data-categ-id="1168">Música, Películas y Series</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/salud-y-belleza/" data-categ-id="1246">Salud y Belleza</a></li>
+				<li><a href="http://home.mercadolibre.com.ar/otras-categorias/" data-categ-id="1953">Otras categorías</a></li>
+			</ul>
+		</nav>
+	</div>
+	
+	<footer class="ch-footer">
+		<p class="nav-footer">
+			<a href="#" title="Sobre MercadoLibre">Sobre MercadoLibre</a>
+			<a href="#" title="Centro de Seguridad">Centro de Seguridad</a>
+			<a href="#" title="Mapa del Sitio">Mapa del Sitio</a>
+			<a href="#" title="Ver otros paises">Ver otros paises</a>
+		</p>
+		<p class="copy">©2012 MercadoLibre S.R.L.</p>
+		<p class="version"><strong>Mobile version</strong></p>
+	</footer>
+
+	
+	<!-- Scripts -->
+	<!-- Base js for all proyects // Change de global object -->
+	<script src="src/js/base.js"></script>
+	<!-- Wireless devices -->
+	<script src="libs/zepto.min.js"></script>
+	<script src="libs/helper.js"></script>
+	<script src="src/js/default.js"></script>
+
+</body>
+</html>
