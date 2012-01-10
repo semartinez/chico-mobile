@@ -195,6 +195,49 @@ img {
 /*--
 	FAVORITES
 ----------------------------*/
+.favorites p {
+	margin:0;
+}
+
+.favorites .image {
+	position:absolute;
+}
+
+.favorites .title {
+	padding:5px 0 0 60px;
+}
+
+.favorites .price {
+	font-size:14px;
+	padding:5px 0 0 60px;
+}
+
+.favorites li {
+	border-bottom:1px dotted #ccc;
+	padding:10px 0;
+}
+
+.favorites li:first-child {
+	padding-top:0;
+}
+
+.favorites .navigation {
+	text-align:center;
+	height:32px;
+	line-height:44px;
+}
+
+.favorites .navigation a:first-child {
+	margin-right:10px;
+}
+
+.favorites .navigation a:first-child:before {
+	content: "< "
+}
+
+.favorites .navigation a:last-child:after {
+	content: " >"
+}
 
 
 /*--
