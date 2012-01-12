@@ -174,10 +174,6 @@ img {
 	color: #7aabc3;
 }
 
-.ch-menu .logout{
-    width: 61px;
-}
-
 /*--
 	SEARCH
 ----------------------------*/
@@ -254,6 +250,23 @@ img {
 	content: " >"
 } */
 
+/*--
+	NAV
+----------------------------*/
+
+#navigation li a {
+	font-weight:normal;
+	color:#476274;
+}
+
+#navigation p {
+	margin-left:6px;
+}
+
+#navigation p a {
+	margin-left:5px;
+	color:#fff;
+}
 
 /*--
 	FOOTER
