@@ -19,6 +19,11 @@ Vip.Mobile = ( function () {
 				// Show
 				$element.addClass("ch-selected");
 				$(tabId).removeClass("ch-hide");
+				
+				// Search focus
+				if ($element.hasClass("ch-search")) {
+					$(tabId).find("input[type=search]").focus();
+				}
 
 				// Hide
 				$element.siblings().removeClass("ch-selected");
