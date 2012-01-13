@@ -23,9 +23,9 @@ body {
 	padding: 15px 10px 10px;
 }
 
-.ch-footer a, .ch-footer a:active, .ch-footer a:visited {
+/*.ch-footer a, .ch-footer a:active, .ch-footer a:visited {
 	color: #999;
-}
+}*/
 
 a:hover {
 	text-decoration:none!important;
@@ -210,6 +210,11 @@ img {
 	padding:6px 0 0 60px;
 	font-size:14px;
 	display:block;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height:1em;
 }
 
 #favorites li {
@@ -279,6 +284,11 @@ footer .nav-footer {
 	margin: 0 0 15px;
 	text-align: center;
 }
+
+footer .nav-footer:first-child {
+	margin: 0;
+}
+
 footer .nav-footer a {
 	border-right: 1px solid #CCC;
 	margin-right: 3px;
