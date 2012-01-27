@@ -6,7 +6,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Template Mobile</title>
+	<title>Chico Mobile</title>
 	
 	<meta name="description" content="">
 	<meta name="author" content="MercadoLibre">
@@ -30,6 +30,8 @@
 </head>
 
 <body>
+
+	<h2>Global Header</h2>
     <header class="ch-header">
 		<h1 class="ch-logo">
 			<img alt="MercadoLibre" src="src/ml/assets/logo.png" />
@@ -54,6 +56,7 @@
 
 	</header>
 	
+	<h2>Section Header</h2>
 	<header class="ch-header ch-path">
 		
 		<h1>Mi cuenta</h1>
@@ -64,6 +67,7 @@
 		
 	</header>
 	
+	<h2>Action Header</h2>
 	<header class="ch-header ch-path ch-skin">
 		
 		<h1>Pregunta</h1>
@@ -76,46 +80,99 @@
 	</header>
 	
 	<div class="ch-layout" role="main">
+	
+		<div class="ch-box">
+			<h2>Buttons</h2>
+			<form action=""> 
+				<input type="button" class="ch-btn ch-primary" value="Comprar">
+				<input type="button" class="ch-btn ch-skin" value="Mas preguntas">
+			</form>
+		</div>
 
-		<h2>Clasificados</h2>
-		<nav>
-			<ul class="ch-list">
-		        <li><a href="http://vehiculos-home.mercadolibre.com.ar/" data-categ-id="1743">Autos, Motos y Otros</a></li>
-		        <li><a href="http://inmuebles-home.mercadolibre.com.ar/" data-categ-id="1459">Inmuebles</a></li>
-		        <li><a href="http://servicios-home.mercadolibre.com.ar/" data-categ-id="1540">Servicios</a></li>
+		<div class="ch-box">
+			<h2>Lists</h2>
+			<nav>
+				<ul class="ch-list">
+			        <li><a href="#" data-categ-id="1743">Autos, Motos y Otros</a></li>
+			        <li><a href="#" data-categ-id="1459">Inmuebles</a></li>
+			        <li><a href="#" data-categ-id="1540">Servicios</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="ch-box">
+			<h2>Highlight List</h2>
+			<nav>
+				<ul class="ch-list">
+		        <li><strong><a href="#">Resumen</a></strong></li>
+		        <li><strong><a href="#">Pagos y Facturas</a></strong></li>
+		        <li><strong><a href="#">Mi reputación</a></strong></li>
 			</ul>
-		</nav>
-
-		<h2>Categorías</h2>
-		<nav>
-			<ul class="ch-list">
-				<li><a href="http://home.mercadolibre.com.ar/vehiculos-accesorios/" data-categ-id="5725">Accesorios para Vehículos</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/animales-y-mascotas/" data-categ-id="1071">Animales y Mascotas</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/antiguedades/" data-categ-id="1367">Antigüedades</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/bebes/" data-categ-id="1384">Bebés</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/fotografia-camaras-y-accesorios/" data-categ-id="1039">Cámaras y Accesorios</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/telefonia/" data-categ-id="1051">Celulares y Telefonía</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/coleccionables/" data-categ-id="1798">Coleccionables y Hobbies</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/computacion/" data-categ-id="1648">Computación</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/videojuegos/" data-categ-id="1144">Consolas y Videojuegos</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/deportes-fitness/" data-categ-id="1276">Deportes y Fitness</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/electrodomesticos/" data-categ-id="5726">Electrodomésticos y Aires Ac.</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/electronica/" data-categ-id="1000">Electrónica, Audio y Video</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/entradas-eventos/" data-categ-id="2547">Entradas para Eventos</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/hogar-muebles/" data-categ-id="1574">Hogar, Muebles y Jardín</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/ropa/" data-categ-id="1430">Indumentaria y Accesorios</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/industrias-oficinas/" data-categ-id="1499">Industrias y Oficinas</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/instrumentos-musicales/" data-categ-id="1182">Instrumentos Musicales</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/joyas-relojes/" data-categ-id="3937">Joyas y Relojes</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/juegos-juguetes/" data-categ-id="1132">Juegos y Juguetes</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/libros-revistas-comics/" data-categ-id="3025">Libros, Revistas y Comics</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/musica-peliculas-series/" data-categ-id="1168">Música, Películas y Series</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/salud-y-belleza/" data-categ-id="1246">Salud y Belleza</a></li>
-				<li><a href="http://home.mercadolibre.com.ar/otras-categorias/" data-categ-id="1953">Otras categorías</a></li>
-			</ul>
-		</nav>
+			</nav>
+		</div>
+		
+		<div class="ch-box">
+			<h2>Dropdown</h2>
+			<div class="ch-dropdown">
+				<h3>Medios de envío</h3>
+				<ul class="ch-hide">
+					<li>A convenir con el vendedor</li>
+					<li>Capital Federal <span class="cost">$20</span></li>
+					<li>Gran Buenos Aires <span class="cost">$25</span></li>
+					<li>Interior de Buenos Aires <span class="cost">$40</span></li>
+					<li>Resto del país <span class="cost">$55</span></li>
+				</ul>
+			</div>
+			<div class="ch-dropdown">
+				<h3>Medios de pago</h3>
+				<ul class="ch-hide">
+					<li>Puedes convenir con el vendedor</li>
+					<li>Con tarjetas</li>
+				</ul>
+			</div>
+		</div>
+		
+		<h2>Questions</h2>
+		<ol class="ch-questions">
+			<li class="question">
+				<article class="ch-reference">
+					<img src="http://img1.mlstatic.com/s_MLA_v_M_f_138023041_6083.jpg">
+					<div class="bd">
+						<p class="title">Sintonizador Dtv2000 Mirá Televisión Digital Gratis! !!! Tdt</p>
+						<p class="price">$1200<sup>00</sup></p>
+						<p class="details">Finaliza en 56 dias, 7 disponibles</p>
+					</div>
+				</article>
+				<nav>
+					<ul class="ch-list">
+				        <li>
+				        	<a href="response.html">
+				        		<p>Hola, quisiera saber si este equipo lo podes conectar a cualquier televisor, y si ademas podes ver algun video desde un pendrive. tambien saber cuanto me costaria con envio incluido a bariloche 3 sintonizadores, 20 m de cable, una antena para exterior con sus respectivos conectores, desde ya muchas gracias.</p>
+				        		<p class="details">MLB_TEST, hace 5 días</p>
+				        	</a>
+				        </li>
+				        <li>
+				        	<a href="response.html">
+				        		<p>hola tenes stock a la plata envias?</p>
+				        		<p class="details">MLA_TE123, hace 9 días</p>
+				        	</a>
+				        </li>
+					</ul>
+				</nav>	
+			</li>
+		</ol>
+		
+		<div class="ch-box">
+			<h2>Forms</h2>
+			<form id="responseQuestion" class="ch-form" action="" method="post">
+				<p class="question">hola tenes stock a la plata envias?</p>
+				<textarea class cols="44" rows="2" name="question" placeholder="Escribe tu respuesta..."></textarea>
+			</form>
+		</div>
+		
 	</div>
 	
+	<h2>Footer</h2>
 	<footer class="ch-footer">
 		<p class="nav-footer">
 			<a href="#" title="Ingresa a Mercadolibre">Ingresar</a>
@@ -144,6 +201,7 @@
 		ch.mobile.hideBar(window);
 		//FOR MOBILE
 		ch.mobile.menu($(".ch-header menu li"));
+		ch.mobile.dropdown($(".ch-dropdown h3"));
 		
 	</script>
 </body>
