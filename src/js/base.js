@@ -1,23 +1,15 @@
-// All independent of framework
+/* 
+
+-----------------------------------
+Decalare namespace for the project
+-----------------------------------
 (function (window, undefined) {
 
-	Vip = (function () {
+	Project = (function () {
 
 		var core = {
 
 			coreVersion: "0.1",
-
-			setCookie: function (conf) {
-				console.log(conf);
-			},
-
-			getCookie: function (conf) {
-				console.log(conf)
-			},
-
-			formatPrice: function (conf) {
-				console.log(conf.price);
-			}
 
 		}
 
@@ -25,6 +17,37 @@
 
 	})();
 
-	window.Vip = Vip;
+	window.Project = Project;
 
 })(window);
+
+-----------------------------------
+Example for extended
+-----------------------------------
+Project.componentName = (function(){
+	
+	// Private methods
+	var print = function(txt) {
+		console.log(txt);
+	},
+	foo = function() {
+		return print("Init the component!");	
+	}
+	
+	// Public methods
+	var Core = {
+		version: "0.1",
+		init: foo
+	}
+	
+	return Core;
+	
+})();
+
+-----------------------------------
+Init component
+-----------------------------------
+Project.componentName.init();
+
+*/
+	

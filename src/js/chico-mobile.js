@@ -1,7 +1,25 @@
 /*--
-	VIP OBJECT
+	CHICO OBJECT
 ----------------------------*/
-Vip.Mobile = ( function () {
+(function (window, undefined) {
+
+	ch = (function () {
+
+		var core = {
+
+			coreVersion: "0.1"
+
+		}
+
+		return core;
+
+	})();
+
+	window.ch = ch;
+
+})(window);
+
+ch.mobile = ( function () {
 
 	//Private methods
 	var menu = function (ele, exclude) {
@@ -27,7 +45,7 @@ Vip.Mobile = ( function () {
 
 				// Hide
 				$element.siblings().removeClass("ch-selected");
-				$(tabId).siblings().addClass("ch-hide");
+				//$(tabId).siblings().addClass("ch-hide");
 
 			} else {
 				$element.removeClass("ch-selected");
@@ -96,17 +114,3 @@ Vip.Mobile = ( function () {
 	return Core;
 
 })();
-
-/*--
-	GENERAL INITATION
-----------------------------*/
-// Iphone scale fix
-MBP.scaleFix();
-// Hide navigation url bar
-Vip.Mobile.hideBar(window);
-
-//FOR MOBILE
-Vip.Mobile.menu($(".ch-header menu li"));
-
-//FOR TABLET
-//Vip.Mobile.menu($(".mobi-menu li"), "tablet");

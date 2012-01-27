@@ -1,56 +1,13 @@
 /*--
-	GLOBAL
-----------------------------*/
-
-/*--
-	HEADER
-----------------------------*/
-.ch-header .ch-search {
-	display: none;
-}
-
-/*--
-	SEARCH
-----------------------------*/
-
-#search.ch-hide {
-	display:block;
-}
-
-.ch-form-search {
-	background: none;
-	border: none;
-	display: block;
-	padding-bottom: 0;
-	padding-top: 0;
-	padding-left: 0;
-	position: absolute;
-	left: 82px;
-	top: 2px;
-	width:50%;
-}
-.ch-form-search input.search {
-	font-size: 16px;
-	height: 27px;
-	padding: 1px 3px;
-}
-.ch-form-search input.search:focus {
-	padding: 0px 2px;
-}
-
-.ch-form-search .ch-btn {
-	top:1px;
-}
-
-
-#search:before {
-	border:none;
-}
+	Tablert global
+--*/
+/* Styles */
 
 
 /*--
 	Landscape view
 --*/
 @media screen and (min-width: 1020px){
+/* Styles */
 
 }

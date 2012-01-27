@@ -6,7 +6,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Home Mobile</title>
+	<title>Template Mobile</title>
 	
 	<meta name="description" content="">
 	<meta name="author" content="MercadoLibre">
@@ -34,66 +34,45 @@
 		<h1 class="ch-logo">
 			<img alt="MercadoLibre" src="src/ml/assets/logo.png" />
 		</h1>
-
+		
+		<form class="ch-form ch-form-search" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
+			<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
+			<input type="submit" value="Buscar" class="ch-btn ch-secondary" accesskey="b">
+		</form>
+			
 		<menu>
-			<li class="ch-search ch-selected"><a class="ch-ico" href="#search">Buscar</a></li>
-			<li class="ch-favs"><a class="ch-ico" href="#favorites">Favoritos</a></li>
 			<li class="ch-nav"><a class="ch-ico" href="#navigation">Menú</a></li>
 		</menu>
+
+		<nav id="navigation" class="ch-hide" role="navigation">
+			<ul class="ch-list">
+				<li><a href="#">Favoritos</a></li>
+				<li><a href="#">Mi cuenta</a></li>
+				<li><a href="#">Ayuda</a></li>
+			</ul>
+		</nav>
+
+	</header>
+	
+	<header class="ch-header ch-path">
 		
-		<dl>
-			<dt>Buscar</dt>
-			<dd id="search">
-				<form class="ch-form ch-form-search ch-box" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
-					<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
-					<input type="submit" value="Buscar" class="ch-btn ch-secondary" accesskey="b">
-				</form>
-				<!--p class="sell">
-					<a rel="nofollow" class="ch-btn ch-secondary" href="#">Vender</a>
-				</p-->
-			</dd>
-			<dt>Favoritos</dt>
-			<dd id="favorites" class="ch-hide">
-				<div class="ch-box">
-					<ul>
-						<li>
-							<a href="#" title="Ipod touch">
-								<img src="http://img2.mlstatic.com/s_MLA_v_I_f_102594247_9098.jpg" height="50" width="50">
-								<span>Ipod touch de 8Gb 4t Generación Ipod touch de 8Gb 4t Generación Ipod touch de 8Gb 4t Generación</span>
-								<span class="price">$ 1.399 <sup>00</sup></span>
-							</a>
-						</li>
-						<li>
-							<a href="#" title="Ipod touch">
-								<img src="http://img2.mlstatic.com/s_MLA_v_I_f_102594247_9098.jpg" height="50" width="50">
-								<span>Ipod touch de 8Gb 4t Generación</span>
-								<span class="price">$ 1.399 <sup>00</sup></span>
-							</a>
-						</li>
-						<li>
-							<a href="#" title="Ipod touch">
-								<img src="http://img2.mlstatic.com/s_MLA_v_I_f_102594247_9098.jpg" height="50" width="50">
-								<span>Ipod touch de 8Gb 4t Generación</span>
-								<span class="price">$ 1.399 <sup>00</sup></span>
-							</a>
-						</li>
-					</ul>
-					<p class="navigation"><a href="#">Ver todos</a></p>
-				</div>
-			</dd>
-			<dt>Menu</dt>
-			<dd id="navigation" class="ch-hide">
-				<nav class="ch-menu ch-box" role="navigation">
-					<p>Hola Chiche <a href="#" class="ch-btn ch-secondary">Salir</a></p>
-					<ul>
-						<li><a href="#" class="ch-btn ch-primary ch-skin">Registrate</a></li>
-						<li><a href="#" class="ch-btn ch-primary ch-skin">Ingresar</a></li>
-						<li><a href="#" class="ch-btn ch-primary ch-skin">Mi cuenta</a></li>
-						<li><a href="#" class="ch-btn ch-primary ch-skin">Ayuda</a></li>
-					</ul>
-				</nav>
-			</dd>
-		</dl>
+		<h1>Mi cuenta</h1>
+		
+		<nav>
+			<a class="ch-btn ch-primary ch-skin" href="http://homes-frontend.mercadolibre.com.ar">Inicio</a>
+		</nav>
+		
+	</header>
+	
+	<header class="ch-header ch-path ch-skin">
+		
+		<h1>Pregunta</h1>
+		
+		<nav>
+			<a class="ch-btn ch-secondary ch-skin" href="questions.html">Cancelar</a>
+			<a class="ch-btn ch-secondary ch-skin last" href="#">Responder</a>
+		</nav>
+		
 	</header>
 	
 	<div class="ch-layout" role="main">
@@ -139,24 +118,33 @@
 	
 	<footer class="ch-footer">
 		<p class="nav-footer">
-			<a href="#" title="Sobre MercadoLibre">Sobre MercadoLibre</a>
-			<a href="#" title="Mapa del Sitio">Mapa del Sitio</a>
+			<a href="#" title="Ingresa a Mercadolibre">Ingresar</a>
+			<!--USER_TEST <a href="#">(Salir)</a-->
 		</p>
-		<p class="nav-footer">
-			<a href="#" title="Ver otros paises">Ver otros paises</a>
-		</p>
-		<p class="copy">©2012 MercadoLibre S.R.L.</p>
-		<p class="version"><strong>Mobile version</strong></p>
+		<p class="copy">© 2012 MercadoLibre S.R.L.</p>
+		<p class="version"><a href="http://www.mercadolibre.com.ar">Version clásica</a></p>
 	</footer>
 
 	
 	<!-- Scripts -->
-	<!-- Base js for all proyects // Change de global object -->
+	<!-- Base js for all proyects // Change the namespaces -->
 	<script src="src/js/base.js"></script>
 	<!-- Wireless devices -->
 	<script src="libs/zepto.min.js"></script>
 	<script src="libs/helper.js"></script>
-	<script src="src/js/default.js"></script>
-
+	<script src="src/js/chico-mobile.js"></script>
+	<script>
+	
+		/*--
+			Global initiation
+		--*/
+		// Iphone scale fix
+		MBP.scaleFix();
+		// Hide navigation url bar
+		ch.mobile.hideBar(window);
+		//FOR MOBILE
+		ch.mobile.menu($(".ch-header menu li"));
+		
+	</script>
 </body>
 </html>
