@@ -169,7 +169,10 @@ hr {
 .ch-btn,
 .ch-btn:focus {
 	border: 1px solid #2C3176;
-	border-radius: 3px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
 	color: #FFF;
 	cursor: pointer;
 	font-size: 1.53em;
@@ -227,51 +230,53 @@ hr {
 
 .ch-btn.ch-primary.ch-skin {
 	border: none;
-	background-image: linear-gradient(top, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -o-linear-gradient(top, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -moz-linear-gradient(top, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -webkit-linear-gradient(top, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -ms-linear-gradient(top, #DFCB1D 0%, #DFCB1D 100%);
+	background-image: linear-gradient(top, #FFE91D 0%, #ECD71D 100%);
+	background-image: -o-linear-gradient(top, #FFE91D 0%, #ECD71D 100%);
+	background-image: -moz-linear-gradient(top, #FFE91D 0%, #ECD71D 100%);
+	background-image: -webkit-linear-gradient(top, #FFE91D 0%, #ECD71D 100%);
+	background-image: -ms-linear-gradient(top, #FFE91D 0%, #ECD71D 100%);
 	background-image: -webkit-gradient(
 		linear,
 		left top,
 		left bottom,
-		color-stop(0, #DFCB1D),
-		color-stop(1, #DFCB1D)
+		color-stop(0, #FFE91D),
+		color-stop(1, #ECD71D)
 	);
-	color: #666;
-	border:none;
+	color: #5B562F;
+	border: 1px solid #E0C805;
 	font-size: 13px;
+	font-weight: normal;
 	margin-left: 1em;
 	margin-top: -0.15em;
-	-webkit-border-radius: .4em;
-	z-index: 100;
-	padding: 0 .7em 0 .5em;
 	height: 31px;
 	line-height: 31px;
+	padding: 0 .7em 0 .5em;
+	text-shadow: 0 1px 1px #FFF;
 	width: auto;
+	z-index: 100;
 }
 .ch-btn.ch-primary.ch-skin:after{
-	border: none;
-	background-image: linear-gradient(left, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -o-linear-gradient(left, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -moz-linear-gradient(left, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -webkit-linear-gradient(left, #DFCB1D 0%, #DFCB1D 100%);
-	background-image: -ms-linear-gradient(left, #DFCB1D 0%, #DFCB1D 100%);
+	border-left: 1px solid #E0C805;
+	border-bottom: 1px solid #E0C805;
+	background-image: linear-gradient(left, #FFE91D 0%, #ECD71D 100%);
+	background-image: -o-linear-gradient(left, #FFE91D 0%, #ECD71D 100%);
+	background-image: -moz-linear-gradient(left, #FFE91D 0%, #ECD71D 100%);
+	background-image: -webkit-linear-gradient(left, #FFE91D 0%, #ECD71D 100%);
+	background-image: -ms-linear-gradient(left, #FFE91D 0%, #ECD71D 100%);
 	background-image: -webkit-gradient(
 		linear,
 		left top,
 		left bottom,
-		color-stop(0, #DFCB1D),
-		color-stop(1, #DFCB1D)
+		color-stop(0, #FFE91D),
+		color-stop(1, #ECD71D)
 	);
 	content: "";
-	height: 1.9em;
-	margin-top: -0.9em;
+	height: 25px;
+	margin-top: -13px;
 	position: absolute;
-	left: -0.7em;
+	left: -0.75em;
 	top: 50%;
-	width: 1.9em;
+	width: 24px;
 	z-index: -100;
 	transform: rotate(45deg);
 	border-radius: .4em;
@@ -299,7 +304,6 @@ hr {
 	);
 	color: #666;
 	text-shadow: 0 1px 1px #FFF;
-	border-radius: 5px;
 	width: auto;
 }
 
@@ -499,6 +503,9 @@ hr {
 	);
 	border: 1px solid #CCC;
 	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
 	height: 42px;
 	overflow: hidden;
 }
@@ -520,11 +527,15 @@ hr {
 }
 
 .ch-header menu {
-	text-align: right;
+	border-radius: 0 4px 4px 0;
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	-o-border-radius: 0 4px 4px 0;
 	font-size: 0;
+	padding: 0;
 	position: absolute;
 	top: 1px; right: 1px;
-	border-radius: 0 4px 4px 0;
+	text-align: right;
 }
 
 .ch-header menu li,
@@ -647,14 +658,15 @@ hr {
 	height: 38px;
 	margin: 5px 0px 10px 75px;
 	overflow: hidden;
-	padding: 3px 50px 3px 3px;
+	padding: 3px 55px 3px 3px;
 }
 
 .ch-form-search input.search {
 	height: 32px;
 	border-radius: 3px;
-	width: 96%;
-	padding: 2px 2%;
+	font-size: 16px;
+	width: 100%;
+	padding: 2px;
 	margin: 0;
 	-webkit-appearance: none;
 }
@@ -666,14 +678,13 @@ hr {
 	background-repeat: no-repeat;
 	border: none!important;
 	position: absolute;
-	top: 7px; right: 53px;
+	top: 7px; right: 51px;
 	width: 36px; height: 32px;
 	padding: 0; margin: 0;
 	text-indent: -9999px;
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	border-radius: 0;
-	display: none;
 }
 
 .ch-form-search .ch-btn.ch-primary:active {
