@@ -20,7 +20,7 @@
 	
 	<link rel="stylesheet" href="src/ml/css/normalize.css">
 
-	<link rel="stylesheet" href="src/ml/css/chico-mobile.css" />
+	<link rel="stylesheet" href="src/ml/css/chico-mobile.css?v=0.1" />
 
 	<!-- Active for phones -->
 	<link rel="stylesheet" media="only screen and (min-width: 240px)" href="src/ml/css/mobile.css" />
@@ -131,19 +131,8 @@
 		</div>
 		
 		<div class="ch-box">
-			<h2>Highlight List</h2>
-			<nav>
-				<ul class="ch-list">
-		        <li><strong><a href="#">Resumen</a></strong></li>
-		        <li><strong><a href="#">Pagos y Facturas</a></strong></li>
-		        <li><strong><a href="#">Mi reputación</a></strong></li>
-			</ul>
-			</nav>
-		</div>
-		
-		<div class="ch-box">
 			<h2>Dropdown</h2>
-			<div class="ch-dropdown">
+			<div class="ch-expando">
 				<h3>Medios de envío</h3>
 				<ul class="ch-hide">
 					<li>A convenir con el vendedor</li>
@@ -153,7 +142,7 @@
 					<li>Resto del país <span class="cost">$55</span></li>
 				</ul>
 			</div>
-			<div class="ch-dropdown">
+			<div class="ch-expando">
 				<h3>Medios de pago</h3>
 				<ul class="ch-hide">
 					<li>Puedes convenir con el vendedor</li>
@@ -230,7 +219,7 @@
 		ch.mobile.hideBar(window);
 		//FOR MOBILE
 		ch.mobile.menu($(".ch-header menu li"));
-		ch.mobile.dropdown($(".ch-dropdown h3"));
+		ch.mobile.expando($(".ch-expando h3"));
 		
 	</script>
 </body>

@@ -54,7 +54,7 @@ ch.mobile = ( function () {
 		});
 	},
 
-	drop = function (ele, toShow) {
+	expando = function (ele, toShow) {
 		$(ele).click( function () {
 			var $toShow = toShow || $(this).next();
 			if ( $toShow.hasClass("ch-hide") ){
@@ -107,7 +107,7 @@ ch.mobile = ( function () {
 	// Public methods
 	var Core = {
 		menu: menu,
-		dropdown: drop,
+		expando: expando,
 		hideBar: hideBar
 	}
 

@@ -274,7 +274,7 @@ hr {
 	height: 25px;
 	margin-top: -13px;
 	position: absolute;
-	left: -0.75em;
+	left: -0.79em;
 	top: 50%;
 	width: 24px;
 	z-index: -100;
@@ -532,6 +532,7 @@ hr {
 	-moz-border-radius: 0 4px 4px 0;
 	-o-border-radius: 0 4px 4px 0;
 	font-size: 0;
+	margin: 0;
 	padding: 0;
 	position: absolute;
 	top: 1px; right: 1px;
@@ -811,14 +812,14 @@ footer .version {
 
 
 /*
-* Dropdown
+* Expando
 */
-.ch-dropdown {
+.ch-expando {
 	border-bottom: 1px solid #eee;
 	overflow: hidden;
 	padding: 0 10px;
 }
-.ch-dropdown h3 {
+.ch-expando h3 {
 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OTQxMDFDRDIxNTMzMTFFMUFEOUZFQkRDOTNGQzRBQzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OTQxMDFDRDMxNTMzMTFFMUFEOUZFQkRDOTNGQzRBQzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4N0NDNjA2MTE1MEExMUUxQUQ5RkVCREM5M0ZDNEFDMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4N0NDNjA2MjE1MEExMUUxQUQ5RkVCREM5M0ZDNEFDMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj7ZBIoAAABCSURBVHjaYjE2Nv7PQARg2r9/P0FFIDVMvLy8DPgUg+RAaphAHFyKYYpAgPH/f4gTTUxMYPIwNzPCBM6cOcMAEGAAhhoWq4A8xJQAAAAASUVORK5CYII=);
 	background-position: 98% 50%;
 	background-repeat: no-repeat;
@@ -826,11 +827,11 @@ footer .version {
 	margin: 0 -10px;
 	padding: 15px 10px;
 }
-.ch-dropdown ul {
+.ch-expando ul {
 	margin-bottom: 10px;
 	overflow: hidden;
 }
-.ch-dropdown li {
+.ch-expando li {
 	color: #666;
 	list-style-position: inside;
 	list-style-type: disc;
