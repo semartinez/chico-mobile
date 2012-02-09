@@ -100,69 +100,52 @@ ch.mobile = ( function () {
 		};
 	},
 	
-	modal = function (trigger, view, fn) {
-
+	modal = function (trigger, content, fn) {
 		// Get some elements
-		var $trigger = $(trigger),
+		var height = document.documentElement.clientHeight,
+			$trigger = $(trigger),
+			$content = $(content).addClass("ch-modal-content"),
+			$view = $("<div>")
+				.addClass("ch-modal ch-hide")
+				.css({
+					"height": height,
+					"top": -height
+				}),
 			$index = $("div[data-page=index]"),
 			lastScroll;
 
 		// Functions
 		var show = function () {
-
 			lastScroll = window.pageYOffset;
-
-			$view
-				.css("top", lastScroll)
-				.removeClass("ch-hide");
+			
+			$view.removeClass("ch-hide");
 
 			if (fn) {
 				fn.call($trigger);
 			}
-
-			$view//.css("left", 0);
-				.anim({"left": "0"}, 0.3, "ease-out", function () {
-					$index.addClass("ch-hide");
-					$view.css({
-						"top": "0",
-						"height": "auto"
-					});
-					
-					$("body").css({
-						"overflow": "hidden",
-						"height": $view.height()
-					});
-				});
+			$view.anim({"top": "0"}, 0.3, "ease-out", function () {
+				$index.addClass("ch-hide");
+				$view.css("height", "auto");
+				window.scrollTo(0, 1);
+			});
 		};
 		
 		var hide = function () {
 			$index.removeClass("ch-hide");
-			$view.css({
-				"top": lastScroll,
-				"height": window.innerHeight
+			$view.css("height", document.documentElement.clientHeight);
+			window.scrollTo(0, lastScroll);
+			$view.anim({"top": -document.documentElement.clientHeight}, 0.3, "ease-out", function () {
+				$view.addClass("ch-hide");
 			});
-			$("body").css({
-				"overflow": "auto",
-				"height": "auto"
-			});
-			window.scroll(0, lastScroll);
-			$view //.css("left", -(window.innerWidth));
-				.anim({"left": -(window.innerWidth)}, 0.3, "ease-out", function () {
-					$view.addClass("ch-hide");
-					
-				});
-		};
-
-		// Set View
-		$view = $(view)
-					.addClass("ch-modal")
-					.css({
-						"height": window.innerHeight,
-						"left": -(window.innerWidth)
-					});
+		};			
 
 		// Creates close button and add behaivor
 		var $close = $("<a class=\"ch-btn ch-secondary ch-skin\" data-action=\"close\">Cancelar</a>").bind("click", hide);
+		
+		$content
+			.removeClass("ch-hide")
+			.wrapAll($view)
+		
 		$view.find(".ch-header nav").append($close);
 
 		// Adds behaivor to trigger
