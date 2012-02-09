@@ -1114,9 +1114,9 @@ input[readonly]:focus {
 	left: 0;
 	z-index: 101;
 	width: 100%;
-	transition: left 0.3s ease-out;
+	/*transition: left 0.3s ease-out;
 	-webkit-transition: left 0.3s ease-out;
-	-o-transition: left 0.3s ease-out;
+	-o-transition: left 0.3s ease-out;*/
 }
 
 .ch-modal-content {

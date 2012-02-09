@@ -109,15 +109,32 @@ ch.mobile = ( function () {
 				.addClass("ch-modal ch-hide")
 				.css({
 					"height": window.innerHeight,
-					"left": -(window.innerWidth)
+					"top": -(window.innerHeight)
+					//"left": -(window.innerWidth)
 				}),
 			$index = $("div[data-page=index]"),
 			lastScroll;
 
 		// Functions
 		var show = function () {
-
 			lastScroll = window.pageYOffset;
+			
+			$view
+				.removeClass("ch-hide");
+
+			if (fn) {
+				fn.call($trigger);
+			}
+
+			$view.anim({"top": "0"}, 0.3, "ease-out", function () {
+				$("body").css({
+					"overflow": "hidden",
+					"height": $view.height()
+				});
+				$index.addClass("ch-hide");
+			})
+
+			/*lastScroll = window.pageYOffset;
 
 			$view
 				.css("top", lastScroll)
@@ -140,11 +157,21 @@ ch.mobile = ( function () {
 						"overflow": "hidden",
 						"height": $view.height()
 					});
-				});
+				});*/
 		};
 		
 		var hide = function () {
 			$index.removeClass("ch-hide");
+			$("body").css({
+				"overflow": "auto",
+				"height": "auto"
+			});
+			window.scrollTo(0, lastScroll);
+			$view.anim({"top": -(window.innerHeight)}, 0.3, "ease-out", function () {
+				$view.addClass("ch-hide");
+			})
+			
+			/*$index.removeClass("ch-hide");
 
 			$view.css({
 				"top": lastScroll,
@@ -163,6 +190,7 @@ ch.mobile = ( function () {
 					$view.addClass("ch-hide");
 					
 				});
+			*/
 		};			
 
 		// Creates close button and add behaivor
