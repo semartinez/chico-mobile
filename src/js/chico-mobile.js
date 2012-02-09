@@ -123,7 +123,6 @@ ch.mobile = ( function () {
 			if (fn) {
 				fn.call($trigger);
 			}
-
 			$view.anim({"top": "0"}, 0.3, "ease-out", function () {
 				$index.addClass("ch-hide");
 				$view.css("height", "auto");
