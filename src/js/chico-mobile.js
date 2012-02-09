@@ -101,15 +101,15 @@ ch.mobile = ( function () {
 	},
 	
 	modal = function (trigger, content, fn) {
-		console.log(window.innerHeight);
 		// Get some elements
-		var $trigger = $(trigger),
+		var height = document.documentElement.clientHeight,
+			$trigger = $(trigger),
 			$content = $(content).addClass("ch-modal-content"),
 			$view = $("<div>")
 				.addClass("ch-modal ch-hide")
 				.css({
-					"height": window.innerHeight,
-					"top": -(window.innerHeight)
+					"height": height,
+					"top": -height
 				}),
 			$index = $("div[data-page=index]"),
 			lastScroll;
@@ -133,9 +133,9 @@ ch.mobile = ( function () {
 		
 		var hide = function () {
 			$index.removeClass("ch-hide");
-			$view.css("height", window.innerHeight);
+			$view.css("height", document.documentElement.clientHeight);
 			window.scrollTo(0, lastScroll);
-			$view.anim({"top": -(window.innerHeight)}, 0.3, "ease-out", function () {
+			$view.anim({"top": -document.documentElement.clientHeight}, 0.3, "ease-out", function () {
 				$view.addClass("ch-hide");
 			});
 		};			
