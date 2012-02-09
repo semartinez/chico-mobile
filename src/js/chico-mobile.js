@@ -1,21 +1,19 @@
 /*--
 	CHICO OBJECT
 ----------------------------*/
-(function (window, undefined) {
+;(function (exports, undefined) {
 
-	ch = (function () {
+	var ch = (function () {
 
 		var core = {
-
-			coreVersion: "0.1"
-
-		}
+			"version": "0.1"		
+		};
 
 		return core;
 
 	})();
 
-	window.ch = ch;
+	exports.ch = ch;
 
 })(window);
 
@@ -62,7 +60,6 @@ ch.mobile = ( function () {
 			}else {
 				$toShow.addClass("ch-hide");
 			}
-
 		} );
 	},
 	
@@ -91,7 +88,7 @@ ch.mobile = ( function () {
 					}	
 				}, 15 );
 	
-			win.addEventListener( "load", function(){
+			win.addEventListener("load", function(){
 				setTimeout(function(){
 					//at load, if user hasn't scrolled more than 20 or so...
 					if( getScrollTop() < 20 ){
@@ -100,15 +97,89 @@ ch.mobile = ( function () {
 					}
 				}, 0);
 			} );
-		}
+		};
+	},
+	
+	modal = function (trigger, view, fn) {
+
+		// Get some elements
+		var $trigger = $(trigger),
+			$index = $("div[data-page=index]"),
+			lastScroll;
+
+		// Functions
+		var show = function () {
+
+			lastScroll = window.pageYOffset;
+
+			$view
+				.css("top", lastScroll)
+				.removeClass("ch-hide");
+
+			if (fn) {
+				fn.call($trigger);
+			}
+
+			$view//.css("left", 0);
+				.anim({"left": "0"}, 0.3, "ease-out", function () {
+					$index.addClass("ch-hide");
+					$view.css({
+						"top": "0",
+						"height": "auto"
+					});
+					
+					$("body").css({
+						"overflow": "hidden",
+						"height": $view.height()
+					});
+				});
+		};
 		
+		var hide = function () {
+			$index.removeClass("ch-hide");
+			$view.css({
+				"top": lastScroll,
+				"height": window.innerHeight
+			});
+			$("body").css({
+				"overflow": "auto",
+				"height": "auto"
+			});
+			window.scroll(0, lastScroll);
+			$view //.css("left", -(window.innerWidth));
+				.anim({"left": -(window.innerWidth)}, 0.3, "ease-out", function () {
+					$view.addClass("ch-hide");
+					
+				});
+		};
+
+		// Set View
+		$view = $(view)
+					.addClass("ch-modal")
+					.css({
+						"height": window.innerHeight,
+						"left": -(window.innerWidth)
+					});
+
+		// Creates close button and add behaivor
+		var $close = $("<a class=\"ch-btn ch-secondary ch-skin\" data-action=\"close\">Cancelar</a>").bind("click", hide);
+		$view.find(".ch-header nav").append($close);
+
+		// Adds behaivor to trigger
+		$trigger.click(function (event) {
+			event.preventDefault();
+			event.stopPropagation();
+			show();
+		});
+
 	};
 
 	// Public methods
 	var Core = {
 		menu: menu,
 		expando: expando,
-		hideBar: hideBar
+		hideBar: hideBar,
+		modal: modal
 	}
 
 	return Core;

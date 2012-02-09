@@ -30,197 +30,212 @@
 </head>
 
 <body>
+	<div data-page="index" role="content">
+		<h1>Chico mobile</h1>
 
-	<h1>Chico mobile</h1>
-
-	<h2>Global header</h2>
-    <header class="ch-header">
-		<h1 class="ch-logo">
-			<img alt="MercadoLibre" src="src/ml/assets/logo.png" />
-		</h1>
-		
-		<form class="ch-form ch-form-search" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
-			<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
-			<input type="submit" value="Buscar" class="ch-btn ch-secondary" accesskey="b">
-		</form>
+		<h2>Global header</h2>
+	    <header class="ch-header">
+			<h1 class="ch-logo">
+				<img alt="MercadoLibre" src="src/ml/assets/logo.png" />
+			</h1>
 			
-		<menu>
-			<li class="ch-nav"><a class="ch-ico" href="#navigation">Menú</a></li>
-		</menu>
-
-		<nav id="navigation" class="ch-hide" role="navigation">
-			<ul class="ch-list">
-				<li><a href="#">Favoritos</a></li>
-				<li><a href="#">Mi cuenta</a></li>
-				<li><a href="#">Ayuda</a></li>
-			</ul>
-		</nav>
-
-	</header>
-	
-	<h2>Section Header</h2>
-	<header class="ch-header ch-path">
-		
-		<h1>Mi cuenta</h1>
-		
-		<nav>
-			<a class="ch-btn ch-primary ch-skin" href="http://homes-frontend.mercadolibre.com.ar">Inicio</a>
-		</nav>
-		
-	</header>
-
-	<h2>Action Header</h2>
-	<header class="ch-header ch-path ch-skin">
-		
-		<h1>Pregunta</h1>
-		
-		<nav>
-			<a class="ch-btn ch-secondary ch-skin" href="questions.html">Cancelar</a>
-			<a class="ch-btn ch-secondary ch-skin last" href="#">Responder</a>
-		</nav>
-		
-	</header>
-	
-	<div class="ch-layout" role="main">
-		
-		<div class="ch-box">
-			<h1>Header 1</h1> 
-			<h2>Header 2</h2> 
-			<h3>Header 3</h3> 
-			<h4>Header 4</h4> 
-			<h5>Header 5</h5> 
-			<h6>Header 6</h6>
-			<p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</div>	
-	
-		<div class="ch-box"> 
-			<h2>Links</h2> 
-			<p><a href="http://www.mercadolibre.com">MercadoLibre</a></p> 
-			<p><a href="http://www.mercadopago.com">MercadoPago</a></p> 
-			<p><a href="http://www.mercadoshops.com">MercadoShops</a></p> 
-			<p><a href="http://www.mercadoclics.com">MercadoClics</a></p> 
-		</div> 
-	
-		<div class="ch-box"> 
-			<h2>Boxes</h2> 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">adipiscing</a>. Donec sit amet purus in sapien luctus sodales <a href="#">adipiscing</a>.</p>
-		</div>
-		
-		<div class="ch-box ch-skin"> 
-			<h2>Highlight Boxes</h2> 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">adipiscing</a>. Donec sit amet purus in sapien luctus sodales <a href="#">adipiscing</a>.</p>
-		</div> 
-	
-		<div class="ch-box">
-			<h2>Buttons</h2>
-			<form action=""> 
-				<input type="button" class="ch-btn ch-primary" value="Comprar">
-				<input type="button" class="ch-btn ch-skin" value="Mas preguntas">
+			<form class="ch-form ch-form-search" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
+				<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
+				<input type="submit" value="Buscar" class="ch-btn ch-secondary" accesskey="b">
 			</form>
-		</div>
-
-		<div class="ch-box">
-			<h2>Lists</h2>
-			<nav>
+				
+			<menu>
+				<li class="ch-nav"><a class="ch-ico" href="#navigation">Menú</a></li>
+			</menu>
+	
+			<nav id="navigation" class="ch-hide" role="navigation">
 				<ul class="ch-list">
-			        <li><a href="#" data-categ-id="1743">Autos, Motos y Otros</a></li>
-			        <li><a href="#" data-categ-id="1459">Inmuebles</a></li>
-			        <li><a href="#" data-categ-id="1540">Servicios</a></li>
+					<li><a href="#">Favoritos</a></li>
+					<li><a href="#">Mi cuenta</a></li>
+					<li><a href="#">Ayuda</a></li>
 				</ul>
 			</nav>
-		</div>
+	
+		</header>
 		
-		<div class="ch-box">
-			<h2>Dropdown</h2>
-			<div class="ch-expando">
-				<h3>Medios de envío</h3>
-				<ul class="ch-hide">
-					<li>A convenir con el vendedor</li>
-					<li>Capital Federal <span class="cost">$20</span></li>
-					<li>Gran Buenos Aires <span class="cost">$25</span></li>
-					<li>Interior de Buenos Aires <span class="cost">$40</span></li>
-					<li>Resto del país <span class="cost">$55</span></li>
-				</ul>
-			</div>
-			<div class="ch-expando">
-				<h3>Medios de pago</h3>
-				<ul class="ch-hide">
-					<li>Puedes convenir con el vendedor</li>
-					<li>Con tarjetas</li>
-				</ul>
-			</div>
-		</div>
+		<h2>Section Header</h2>
+		<header class="ch-header ch-path">
+			
+			<h1>Mi cuenta</h1>
+			
+			<nav>
+				<a class="ch-btn ch-primary ch-skin" href="http://homes-frontend.mercadolibre.com.ar">Inicio</a>
+			</nav>
+			
+		</header>
+	
+		<h2>Action Header</h2>
+		<header class="ch-header ch-path ch-skin">
+			
+			<h1>Pregunta</h1>
+			
+			<nav>
+				<a class="ch-btn ch-secondary ch-skin" href="questions.html">Cancelar</a>
+				<a class="ch-btn ch-secondary ch-skin last makeAnswer" href="#">Responder</a>
+			</nav>
+			
+		</header>
 		
-		<h2>Questions</h2>
-		<ol class="ch-questions">
-			<li class="question">
-				<article class="ch-reference">
-					<img src="http://img1.mlstatic.com/s_MLA_v_M_f_138023041_6083.jpg">
-					<div class="bd">
-						<p class="title">Sintonizador Dtv2000 Mirá Televisión Digital Gratis! !!! Tdt</p>
-						<p class="price">$1200<sup>00</sup></p>
-						<p class="details">Finaliza en 56 dias, 7 disponibles</p>
-					</div>
-				</article>
+		<div class="ch-layout" role="main">
+			
+			<div class="ch-box">
+				<h1>Header 1</h1> 
+				<h2>Header 2</h2> 
+				<h3>Header 3</h3> 
+				<h4>Header 4</h4> 
+				<h5>Header 5</h5> 
+				<h6>Header 6</h6>
+				<p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>	
+		
+			<div class="ch-box"> 
+				<h2>Links</h2> 
+				<p><a href="http://www.mercadolibre.com">MercadoLibre</a></p> 
+				<p><a href="http://www.mercadopago.com">MercadoPago</a></p> 
+				<p><a href="http://www.mercadoshops.com">MercadoShops</a></p> 
+				<p><a href="http://www.mercadoclics.com">MercadoClics</a></p> 
+			</div> 
+		
+			<div class="ch-box"> 
+				<h2>Boxes</h2> 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">adipiscing</a>. Donec sit amet purus in sapien luctus sodales <a href="#">adipiscing</a>.</p>
+			</div>
+			
+			<div class="ch-box ch-skin"> 
+				<h2>Highlight Boxes</h2> 
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">adipiscing</a>. Donec sit amet purus in sapien luctus sodales <a href="#">adipiscing</a>.</p>
+			</div> 
+		
+			<div class="ch-box">
+				<h2>Buttons</h2>
+				<form action=""> 
+					<input type="button" class="ch-btn ch-primary" value="Comprar">
+					<input type="button" class="ch-btn ch-skin" value="Mas preguntas">
+				</form>
+			</div>
+	
+			<div class="ch-box">
+				<h2>Lists</h2>
 				<nav>
 					<ul class="ch-list">
-				        <li>
-				        	<a href="response.html">
-				        		<p>Hola, quisiera saber si este equipo lo podes conectar a cualquier televisor, y si ademas podes ver algun video desde un pendrive. tambien saber cuanto me costaria con envio incluido a bariloche 3 sintonizadores, 20 m de cable, una antena para exterior con sus respectivos conectores, desde ya muchas gracias.</p>
-				        		<p class="details">MLB_TEST, hace 5 días</p>
-				        	</a>
-				        </li>
-				        <li>
-				        	<a href="response.html">
-				        		<p>hola tenes stock a la plata envias?</p>
-				        		<p class="details">MLA_TE123, hace 9 días</p>
-				        	</a>
-				        </li>
+				        <li><a href="#" data-categ-id="1743">Autos, Motos y Otros</a></li>
+				        <li><a href="#" data-categ-id="1459">Inmuebles</a></li>
+				        <li><a href="#" data-categ-id="1540">Servicios</a></li>
 					</ul>
-				</nav>	
-			</li>
-		</ol>
-		
-		<div class="ch-box">
-			<h2>Forms</h2>
-			<form id="responseQuestion" class="ch-form" action="" method="post">
-				<p class="question">hola tenes stock a la plata envias?</p>
-				<textarea class cols="44" rows="2" name="question" placeholder="Escribe tu respuesta..."></textarea>
-			</form>
+				</nav>
+			</div>
+			
+			<div class="ch-box">
+				<h2>Dropdown</h2>
+				<div class="ch-expando">
+					<h3>Medios de envío</h3>
+					<ul class="ch-hide">
+						<li>A convenir con el vendedor</li>
+						<li>Capital Federal <span class="cost">$20</span></li>
+						<li>Gran Buenos Aires <span class="cost">$25</span></li>
+						<li>Interior de Buenos Aires <span class="cost">$40</span></li>
+						<li>Resto del país <span class="cost">$55</span></li>
+					</ul>
+				</div>
+				<div class="ch-expando">
+					<h3>Medios de pago</h3>
+					<ul class="ch-hide">
+						<li>Puedes convenir con el vendedor</li>
+						<li>Con tarjetas</li>
+					</ul>
+				</div>
+			</div>
+			
+			<h2>Questions</h2>
+			<ol class="ch-questions">
+				<li class="question">
+					<article class="ch-reference">
+						<img src="http://img1.mlstatic.com/s_MLA_v_M_f_138023041_6083.jpg">
+						<div class="bd">
+							<p class="title">Sintonizador Dtv2000 Mirá Televisión Digital Gratis! !!! Tdt</p>
+							<p class="price">$1200<sup>00</sup></p>
+							<p class="details">Finaliza en 56 dias, 7 disponibles</p>
+						</div>
+					</article>
+					<nav>
+						<ul class="ch-list">
+					        <li>
+					        	<a href="response.html">
+					        		<p>Hola, quisiera saber si este equipo lo podes conectar a cualquier televisor, y si ademas podes ver algun video desde un pendrive. tambien saber cuanto me costaria con envio incluido a bariloche 3 sintonizadores, 20 m de cable, una antena para exterior con sus respectivos conectores, desde ya muchas gracias.</p>
+					        		<p class="details">MLB_TEST, hace 5 días</p>
+					        	</a>
+					        </li>
+					        <li>
+					        	<a href="response.html">
+					        		<p>hola tenes stock a la plata envias?</p>
+					        		<p class="details">MLA_TE123, hace 9 días</p>
+					        	</a>
+					        </li>
+						</ul>
+					</nav>	
+				</li>
+			</ol>
+			
+			<div class="ch-box">
+				<h2>Forms</h2>
+				<form id="responseQuestion" class="ch-form" action="" method="post">
+					<p class="question">hola tenes stock a la plata envias?</p>
+					<textarea class cols="44" rows="2" name="question" placeholder="Escribe tu respuesta..."></textarea>
+				</form>
+			</div>
+			
 		</div>
 		
+		<footer class="ch-footer">
+			<p class="nav-footer">
+				<a href="#" title="Ingresa a Mercadolibre">Ingresar</a>
+				<!--USER_TEST <a href="#">(Salir)</a-->
+			</p>
+			<p class="copy">© 2012 MercadoLibre S.R.L.</p>
+			<p class="version"><a href="http://www.mercadolibre.com.ar">Version clásica</a></p>
+		</footer>
 	</div>
-	
-	<footer class="ch-footer">
-		<p class="nav-footer">
-			<a href="#" title="Ingresa a Mercadolibre">Ingresar</a>
-			<!--USER_TEST <a href="#">(Salir)</a-->
-		</p>
-		<p class="copy">© 2012 MercadoLibre S.R.L.</p>
-		<p class="version"><a href="http://www.mercadolibre.com.ar">Version clásica</a></p>
-	</footer>
 
+	<div data-page="modal" id="modal" class="ch-hide" role="content">
+		<header class="ch-header ch-path ch-skin">
+			<h1>Pregunta</h1>
+			<nav>
+				<a class="ch-btn ch-secondary ch-skin last" href="#">Responder</a>
+			</nav>
+		</header>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet purus in sapien luctus sodales. Curabitur dui velit, cursus in sagittis aliquam, dictum at neque. Ut gravida scelerisque lorem non pulvinar. Pellentesque et urna vitae nisl porta imperdiet sed nec ipsum. Sed non sem velit. Cras id consectetur tellus. Vestibulum posuere purus non enim pharetra vel vulputate eros hendrerit. Ut pulvinar placerat risus quis interdum. Mauris eget tempus risus. Aenean accumsan dolor in lorem elementum ac tincidunt urna rutrum. Sed sit amet nunc velit, vitae tincidunt ipsum. Fusce mattis elementum justo, et lacinia odio pharetra a. Donec egestas imperdiet eros a interdum. Suspendisse sodales, ligula vitae pulvinar aliquam, elit justo pretium urna, ut hendrerit arcu dolor vitae ipsum.</p>
+	</div>
 	
 	<!-- Scripts -->
 	<!-- Base js for all proyects // Change the namespaces -->
 	<script src="src/js/base.js"></script>
 	<!-- Wireless devices -->
-	<script src="libs/zepto.min.js"></script>
+	<script src="libs/zepto.js"></script>
 	<script src="libs/helper.js"></script>
 	<script src="src/js/chico-mobile.js"></script>
 	<script>
-	
+
 		/*--
 			Global initiation
 		--*/
 		// Iphone scale fix
 		MBP.scaleFix();
+		
 		// Hide navigation url bar
-		ch.mobile.hideBar(window);
+		MBP.hideUrlBarOnLoad();
+		//ch.mobile.hideBar(window);
+
 		//FOR MOBILE
 		ch.mobile.menu($(".ch-header menu li"));
 		ch.mobile.expando($(".ch-expando h3"));
-		
+
+		// MODAL
+		ch.mobile.modal(".makeAnswer", "#modal");
 	</script>
 </body>
 </html>

@@ -7,6 +7,12 @@ body {
 	margin: 0 auto;
 	position: relative;
 	padding: 0 10px;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+[data-page] {
+
 }
 
 a:hover {
@@ -1097,4 +1103,18 @@ input[readonly]:focus {
 	height: 100px;
 	padding: 2%;
 	width: 96%;
+}
+
+
+/* MODAL */
+.ch-modal {
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	width: 100%;
+	transition: left 0.3s ease-out;
+	-webkit-transition: left 0.3s ease-out;
+	-o-transition: left 0.3s ease-out;
 }
