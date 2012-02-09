@@ -101,7 +101,7 @@ ch.mobile = ( function () {
 	},
 	
 	modal = function (trigger, content, fn) {
-
+		console.log(window.innerHeight);
 		// Get some elements
 		var $trigger = $(trigger),
 			$content = $(content).addClass("ch-modal-content"),
@@ -110,7 +110,6 @@ ch.mobile = ( function () {
 				.css({
 					"height": window.innerHeight,
 					"top": -(window.innerHeight)
-					//"left": -(window.innerWidth)
 				}),
 			$index = $("div[data-page=index]"),
 			lastScroll;
@@ -119,78 +118,26 @@ ch.mobile = ( function () {
 		var show = function () {
 			lastScroll = window.pageYOffset;
 			
-			$view
-				.removeClass("ch-hide");
+			$view.removeClass("ch-hide");
 
 			if (fn) {
 				fn.call($trigger);
 			}
 
 			$view.anim({"top": "0"}, 0.3, "ease-out", function () {
-				$("body").css({
-					"overflow": "hidden",
-					"height": $view.height()
-				});
 				$index.addClass("ch-hide");
-			})
-
-			/*lastScroll = window.pageYOffset;
-
-			$view
-				.css("top", lastScroll)
-				.removeClass("ch-hide");
-
-			if (fn) {
-				fn.call($trigger);
-			}
-
-			
-			$view //.css("left", 0);
-				.anim({"left": "0"}, 0.3, "ease-out", function () {
-					$index.addClass("ch-hide");
-					$view.css({
-						"top": "0",
-						"height": "auto"
-					});
-					
-					$("body").css({
-						"overflow": "hidden",
-						"height": $view.height()
-					});
-				});*/
+				$view.css("height", "auto");
+				MBP.hideUrlBar();
+			});
 		};
 		
 		var hide = function () {
 			$index.removeClass("ch-hide");
-			$("body").css({
-				"overflow": "auto",
-				"height": "auto"
-			});
+			$view.css("height", window.innerHeight);
 			window.scrollTo(0, lastScroll);
 			$view.anim({"top": -(window.innerHeight)}, 0.3, "ease-out", function () {
 				$view.addClass("ch-hide");
-			})
-			
-			/*$index.removeClass("ch-hide");
-
-			$view.css({
-				"top": lastScroll,
-				"height": window.innerHeight
 			});
-
-			$("body").css({
-				"overflow": "auto",
-				"height": "auto"
-			});
-
-			window.scroll(0, lastScroll);
-
-			$view //.css("left", -(window.innerWidth));
-				.anim({"left": -(window.innerWidth)}, 0.3, "ease-out", function () {
-					$view.addClass("ch-hide");
-					
-				});
-			*/
 		};			
 
 		// Creates close button and add behaivor
