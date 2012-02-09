@@ -1118,3 +1118,7 @@ input[readonly]:focus {
 	-webkit-transition: left 0.3s ease-out;
 	-o-transition: left 0.3s ease-out;
 }
+
+.ch-modal-content {
+	margin: 0 10px;
+}
