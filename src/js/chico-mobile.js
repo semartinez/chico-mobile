@@ -126,7 +126,7 @@ ch.mobile = ( function () {
 			$view.anim({"top": "0"}, 0.3, "ease-out", function () {
 				$index.addClass("ch-hide");
 				$view.css("height", "auto");
-				MBP.hideUrlBar();
+				window.scrollTo(0, 1);
 			});
 		};
 		
