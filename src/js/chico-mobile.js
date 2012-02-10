@@ -115,11 +115,11 @@ ch.mobile = ( function () {
 			lastScroll;
 
 		// Functions
-		var show = function () {
+		var show = function (trigger) {
 			lastScroll = window.pageYOffset;
 
 			if (fn) {
-				fn.call($trigger);
+				fn.call(trigger);
 			}
 			
 			$index.css({"position":"absolute","top": -lastScroll,"left":0});
@@ -157,7 +157,7 @@ ch.mobile = ( function () {
 		$trigger.click(function (event) {
 			event.preventDefault();
 			event.stopPropagation();
-			show();
+			show(this);
 		});
 
 	};
