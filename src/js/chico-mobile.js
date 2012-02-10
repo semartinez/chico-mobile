@@ -102,14 +102,14 @@ ch.mobile = ( function () {
 	
 	modal = function (trigger, content, fn) {
 		// Get some elements
-		var height = document.documentElement.clientHeight,
+		var width = document.documentElement.clientWidth,
 			$trigger = $(trigger),
 			$content = $(content).addClass("ch-modal-content"),
 			$view = $("<div>")
 				.addClass("ch-modal ch-hide")
 				.css({
-					"height": height,
-					"top": -height
+					"min-height": document.documentElement.clientHeight,
+					"left": width
 				}),
 			$index = $("div[data-page=index]"),
 			lastScroll;
@@ -117,25 +117,30 @@ ch.mobile = ( function () {
 		// Functions
 		var show = function () {
 			lastScroll = window.pageYOffset;
-			
-			$view.removeClass("ch-hide");
 
 			if (fn) {
 				fn.call($trigger);
 			}
-			$view.anim({"top": "0"}, 0.3, "ease-out", function () {
+			
+			$index.css({"position":"absolute","top": -lastScroll,"left":0});
+			window.scrollTo(0, 1);
+			
+			$view.removeClass("ch-hide");
+			
+			$view.anim({"left": 0}, 0.3, "ease-out", function () {
 				$index.addClass("ch-hide");
-				$view.css("height", "auto");
-				window.scrollTo(0, 1);
 			});
 		};
 		
 		var hide = function () {
 			$index.removeClass("ch-hide");
-			$view.css("height", document.documentElement.clientHeight);
-			window.scrollTo(0, lastScroll);
-			$view.anim({"top": -document.documentElement.clientHeight}, 0.3, "ease-out", function () {
+			$view.anim({"left": document.documentElement.clientWidth}, 0.3, "ease-out", function () {
 				$view.addClass("ch-hide");
+				$index.css({
+					"position":"relative",
+					"top": 0
+				});
+				window.scrollTo(0, lastScroll);
 			});
 		};			
 
@@ -144,7 +149,7 @@ ch.mobile = ( function () {
 		
 		$content
 			.removeClass("ch-hide")
-			.wrapAll($view)
+			.wrapAll($view);
 		
 		$view.find(".ch-header nav").append($close);
 
