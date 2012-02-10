@@ -101,8 +101,59 @@ ch.mobile = ( function () {
 	},
 	
 	modal = function (trigger, content, fn) {
+
 		// Get some elements
-		var width = document.documentElement.clientWidth,
+		var $trigger = $(trigger),
+			$content = $(content).addClass("ch-modal-content"),
+			$view = $("<div>")
+				.addClass("ch-modal ch-hide"),
+			$index = $("div[data-page=index]"),
+			lastScroll;
+
+		// Functions
+		var show = function (trigger) {
+			// Callbacks on Show
+			if (fn) {
+				fn.call(trigger);
+			}
+
+			// Save last scroll position
+			lastScroll = window.pageYOffset;
+
+			// Toogle classes to show and hide
+			$index.addClass("ch-hide");
+			$view.removeClass("ch-hide");
+
+			// Set scroll to top
+			window.scrollTo(0, 1);
+		};
+		
+		var hide = function () {
+			// Toogle classes to show and hide
+			$index.removeClass("ch-hide");
+			$view.addClass("ch-hide");
+
+			// Update scroll position
+			window.scrollTo(0, lastScroll);
+		}
+
+		// Creates close button and add behaivor
+		var $close = $("<a class=\"ch-btn ch-secondary ch-skin\" data-action=\"close\">Cancelar</a>").bind("click", hide);
+		
+		$content
+			.removeClass("ch-hide")
+			.wrapAll($view);
+		
+		$view.find(".ch-header nav").append($close);
+
+		// Adds behaivor to trigger
+		$trigger.click(function (event) {
+			event.preventDefault();
+			event.stopPropagation();
+			show(this);
+		});
+		
+		/*var width = document.documentElement.clientWidth,
 			$trigger = $(trigger),
 			$content = $(content).addClass("ch-modal-content"),
 			$view = $("<div>")
@@ -142,23 +193,7 @@ ch.mobile = ( function () {
 				});
 				window.scrollTo(0, lastScroll);
 			});
-		};			
-
-		// Creates close button and add behaivor
-		var $close = $("<a class=\"ch-btn ch-secondary ch-skin\" data-action=\"close\">Cancelar</a>").bind("click", hide);
-		
-		$content
-			.removeClass("ch-hide")
-			.wrapAll($view);
-		
-		$view.find(".ch-header nav").append($close);
-
-		// Adds behaivor to trigger
-		$trigger.click(function (event) {
-			event.preventDefault();
-			event.stopPropagation();
-			show(this);
-		});
+		};*/
 
 	};
 
