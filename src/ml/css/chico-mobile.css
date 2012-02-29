@@ -10,7 +10,7 @@ body {
 }
 
 [data-page] {
-	margin: 0 10px;
+	margin: 0 5px;
 }
 
 a:hover {
@@ -1121,6 +1121,6 @@ input[readonly]:focus {
 }
 
 .ch-modal-content {
-	margin: 0 10px;
+	margin: 0 5px;
 	background-color: #FFFFFF;
 }
