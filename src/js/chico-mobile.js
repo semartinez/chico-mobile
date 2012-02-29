@@ -146,8 +146,8 @@ ch.mobile = ( function () {
 		
 		$view.find(".ch-header nav").append($close);
 
-		// Adds behaivor to trigger
-		$trigger.bind("click", function (event) {
+		// If you creates some DOM elements by ajax... live works!
+		$trigger.live("click", function (event) {
 			event.preventDefault();
 			event.stopPropagation();
 			show(this);
