@@ -331,11 +331,42 @@ hr {
 
 
 /*
+* Icon Fonts
+*/
+/*
+
+Icon                		Hex Entitiy         CSS Content
+======================================================================
+Checkmark           		+                   content: '+';
+Info                		i                   content: 'i';
+Cancel              		x                   content: 'x';
+
+*/
+
+@font-face {
+  font-family: 'IcoMoon';
+  src: url('../fonts/icoMoon.eot');
+  src: url('../fonts/icoMoon.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/icoMoon.woff') format('woff'),
+       url('../fonts/icoMoon.ttf') format('truetype'),
+       url('../fonts/icoMoon.svg#IcoMoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ch-icon:before, .ch-message:before {
+	content: attr(data-icon);
+	font-family: "IcoMoon";
+	font-size: 24px;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+/*
 * Icons and Message Boxes 
 */
 
-.ch-ico, .ico,
-.ch-message, .message {
+.ch-ico, .ico {
 	background: url(../assets/icons.png) no-repeat;
 }
 
@@ -350,31 +381,6 @@ hr {
 	background-repeat: no-repeat;
 }
 
-.ch-ico.ch-attention {
-	background-position: -77px -110px;
-}
-
-.ch-ico.ch-check {
-	background-position: -43px -144px;
-}
-
-.ch-ico.ch-error {
-	background-position: -179px -9px;
-}
-
-.ch-ico.ch-help {
-	background-position: -111px -76px;
-}
-
-.ch-ico.ch-information {
-	background-position: -145px -42px;
-}	
-
-.ch-ico.ch-ok {
-	background-position: -9px -178px;
-	height: 17px;
-}
-
 
 /* Message boxes */
 
@@ -382,47 +388,20 @@ hr {
 	border-radius: 3px;
 	border-style: solid;
 	border-width: 1px;
-	margin: 0 0 5px;
-	padding: 8px 10px 8px 34px;
-}
-
-.ch-message.ch-attention {	
-	background-color: #FCF8CB;
-	background-position: -68px -101px;
-	border-color: #E4E2B8;
-}
-
-
-.ch-message.ch-check {
-	background-color: #E8FFD7;
-	background-position: -34px -135px;
-	border-color: #C7DDBC;
-	color: #487210;
+	line-height: 25px;
+	padding: 8px 10px 8px;
 }
 	
 .ch-message.ch-error {	
 	background-color:#fbd9db;
-	background-position: -170px 0px;
 	border-color: #f7a9ae;
 	color:#600;
 }		
 
-.ch-message.ch-help {	
-	background-color: #F6F9F3;
-	background-position: -102px -67px;
-	border-color: #cccccc;
-}
-	
-.ch-message.ch-information {	
-	background-color: #E5EBFD;
-	background-position: -136px -33px;
-	border-color: #A0B1DE;
-}
-	
 .ch-message.ch-ok {
 	background-color: #E8FFD7;
-	background-position: 0 -169px;
 	border-color: #C7DDBC;
+	color: #487210;
 }
 
 
@@ -1145,3 +1124,4 @@ input[readonly]:focus {
 	margin: 0 5px;
 	background-color: #FFFFFF;
 }
+
