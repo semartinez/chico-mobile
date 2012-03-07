@@ -1,5 +1,5 @@
 /*
-* Chico Mobile 0.3.0 MIT Licence
+* Chico Mobile 0.3.1 MIT Licence
 * @autor <chico@mercadolibre.com>
 * @link http://www.chico-ui.com.ar
 * @team Hernan Mammana, Leandro Linares, Guillermo Paz, Natalia Devalle, Nicolas Brizuela
