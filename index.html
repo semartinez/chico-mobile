@@ -81,7 +81,7 @@
 				<img alt="MercadoLibre" src="src/assets/logo.png" />
 			</h1>
 			
-			<form class="ch-form ch-form-search" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
+			<form class="ch-form ch-header-form" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
 				<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
 				<input type="submit" value="Buscar" accesskey="b">
 			</form>
@@ -205,6 +205,20 @@
 					<textarea class cols="44" rows="2" name="question" placeholder="Escribe tu respuesta..."></textarea>
 				</form>
 			</div>
+
+			<div class="ch-box">
+				<h2>Transitions</h2>
+				<div class="ch-loading"></div>
+				<div class="ch-loading-wrap">
+					<div class="ch-loading">Cargando...</div>
+				</div>
+			</div>
+
+			<div class="ch-box">
+				<h2>Message Boxes</h2>
+				<p class="ch-message-error" data-icon="x">Oops! something went wrong</p>
+				<p class="ch-message-ok" data-icon="+">Everything is fine</p>
+			</div>
 			
 		</div>
 		
@@ -233,7 +247,7 @@
 	<!-- Base js for all proyects // Change the namespaces -->
 	<script src="src/js/base.js"></script>
 	<!-- Wireless devices -->
-	<script src="libs/zepto.js"></script>
+	<script src="libs/zepto.min.js"></script>
 	<script src="libs/helper.js"></script>
 	<script src="src/js/chico-mobile.js"></script>
 	<script>

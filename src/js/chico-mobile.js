@@ -28,7 +28,7 @@ ch.mobile = ( function () {
 
 	//Private methods
 	var menu = function (ele, exclude) {
-		$(ele).click(function (event) {
+		$(ele).bind("click", function (event) {
 			event.preventDefault();
 			event.stopPropagation();
 			
@@ -60,7 +60,7 @@ ch.mobile = ( function () {
 	},
 
 	expando = function (ele, toShow) {
-		$(ele).click( function () {
+		$(ele).bind("click", function () {
 			var $toShow = toShow || $(this).next();
 			if ( $toShow.hasClass("ch-hide") ){
 				$toShow.removeClass("ch-hide");
@@ -153,7 +153,6 @@ ch.mobile = ( function () {
 		
 		$view.find(".ch-header-action nav").append($close);
 
-		// Adds behaivor to trigger
 		// If you creates some DOM elements by ajax... live works!
 		$trigger.live("click", function (event) {
 			event.preventDefault();

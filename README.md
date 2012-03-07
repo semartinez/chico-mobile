@@ -27,7 +27,7 @@ The team
 - Guillermo Paz (Frontender), @pazguille
 - Natalia Devalle (UX Designer), @taly
 
-Thanks to
+Collaborators
 ---------
 - Nicolas Brizuela (UX Designer), @njbrizuela
 
