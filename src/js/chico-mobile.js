@@ -1,3 +1,10 @@
+/*
+* Chico Mobile 0.3.0 MIT Licence
+* @autor <chico@mercadolibre.com>
+* @link http://www.chico-ui.com.ar
+* @team Hernan Mammana, Leandro Linares, Guillermo Paz, Natalia Devalle, Nicolas Brizuela
+*/
+
 /*--
 	CHICO OBJECT
 ----------------------------*/
@@ -21,7 +28,7 @@ ch.mobile = ( function () {
 
 	//Private methods
 	var menu = function (ele, exclude) {
-		$(ele).click(function (event) {
+		$(ele).bind("click", function (event) {
 			event.preventDefault();
 			event.stopPropagation();
 			
@@ -53,7 +60,7 @@ ch.mobile = ( function () {
 	},
 
 	expando = function (ele, toShow) {
-		$(ele).click( function () {
+		$(ele).bind("click", function () {
 			var $toShow = toShow || $(this).next();
 			if ( $toShow.hasClass("ch-hide") ){
 				$toShow.removeClass("ch-hide");
@@ -138,16 +145,16 @@ ch.mobile = ( function () {
 		}
 
 		// Creates close button and add behaivor
-		var $close = $("<a class=\"ch-btn ch-secondary ch-skin\" data-action=\"close\">Cancelar</a>").bind("click", hide);
+		var $close = $("<a class=\"ch-btn-action ch-btn-small\" data-action=\"close\">Cancelar</a>").bind("click", hide);
 		
 		$content
 			.removeClass("ch-hide")
 			.wrapAll($view);
 		
-		$view.find(".ch-header nav").append($close);
+		$view.find(".ch-header-action nav").append($close);
 
-		// Adds behaivor to trigger
-		$trigger.click(function (event) {
+		// If you creates some DOM elements by ajax... live works!
+		$trigger.live("click", function (event) {
 			event.preventDefault();
 			event.stopPropagation();
 			show(this);

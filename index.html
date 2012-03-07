@@ -18,30 +18,72 @@
 	
 	<meta http-equiv="cleartype" content="on">
 	
-	<link rel="stylesheet" href="src/ml/css/normalize.css">
+	<link rel="stylesheet" href="src/css/normalize.css">
 
-	<link rel="stylesheet" href="src/ml/css/chico-mobile.css?v=0.1" />
+	<link rel="stylesheet" href="src/css/chico-mobile.css?v=0.1" />
 
 	<!-- Active for phones -->
-	<link rel="stylesheet" media="only screen and (min-width: 240px)" href="src/ml/css/mobile.css" />
+	<link rel="stylesheet" media="only screen and (min-width: 240px)" href="src/css/mobile.css" />
 	<!-- Active for tablets -->
-	<link rel="stylesheet" media="only screen and (min-width: 768px)" href="src/ml/css/tablet.css">
+	<link rel="stylesheet" media="only screen and (min-width: 768px)" href="src/css/tablet.css">
 
 </head>
 
 <body>
 	<div data-page="index" role="content">
-		<h1>Chico mobile</h1>
+		<div class="box">
+			<h1>Titles</h1>
+			<h1>h1</h1>
+			<h2>h2</h2>
+			<h3>h3</h3>
+			<h4>h4</h4>
+			<h5>h5</h5>
+			<h6>h6</h6>
+		</div>
+
+		<div class="box">
+			<h2>Links</h2>
+			<p><a href="http://www.mercadolibre.com">MercadoLibre</a></p>
+			<p><a href="http://www.mercadopago.com">MercadoPago</a></p>
+			<p><a href="http://www.mercadoshops.com">MercadoShops</a></p>
+			<p><a href="http://www.mercadoclics.com">MercadoClics</a></p>
+		</div>
+
+		<div class="box clearfix">
+			<h2>Buttons</h2>
+			<p><a href="" class="ch-btn">Link button</a></p>
+			<p><a href="" class="ch-btn ch-btn-small">Link button</a></p>
+			<p><input type="button" class="ch-btn" value="Button"></p>
+			<p><input type="button" class="ch-btn ch-btn-small" value="Small button"></p>
+			<p><input type="button" class="ch-btn-skin" value="Skin button"></p>
+			<p><input type="button" class="ch-btn-skin ch-btn-small" value="Skin button"></p>
+			<p><input type="button" class="ch-btn-action" value="Action button"></p>
+			<p><input type="button" class="ch-btn-action ch-btn-small" value="Action button"></p>
+			<p><a class="ch-btn-action ch-btn-small" href="http://homes-frontend.mercadolibre.com.ar">Action Button</a></p>
+
+			<h2>Disable Buttons</h2>
+			<div><p class="ch-btn ch-btn-disabled">P button disabled</p></div>
+			<div><p class="ch-btn ch-btn-small ch-btn-disabled">P button disabled</p></div>
+			<p><a href="" class="ch-btn ch-btn-disabled">Link button disabled</a></p>
+			<p><a href="" class="ch-btn ch-btn-small ch-btn-disabled">Link button disabled</a></p>
+			<p><input type="button" class="ch-btn ch-btn-disabled" value="Button disabled" disabled></p>
+			<p><input type="button" class="ch-btn ch-btn-small ch-btn-disabled" value="Small button disabled" disabled></p>
+			<p><input type="button" class="ch-btn-skin ch-btn-disabled" value="Skin button disabled" disabled></p>
+			<p><input type="button" class="ch-btn-skin ch-btn-small ch-btn-disabled" value="Skin button disabled" disabled></p>
+			<p><input type="button" class="ch-btn-action ch-btn-disabled" disabled value="Action button"></p>
+			<p><input type="button" class="ch-btn-action ch-btn-small ch-btn-disabled" disabled value="Action button"></p>
+			<p><a class="ch-btn-action ch-btn-small ch-btn-disabled" href="http://homes-frontend.mercadolibre.com.ar">Action Button</a></p>
+		</div>
 
 		<h2>Global header</h2>
 	    <header class="ch-header">
 			<h1 class="ch-logo">
-				<img alt="MercadoLibre" src="src/ml/assets/logo.png" />
+				<img alt="MercadoLibre" src="src/assets/logo.png" />
 			</h1>
 			
-			<form class="ch-form ch-form-search" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
+			<form class="ch-form ch-header-form" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
 				<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
-				<input type="submit" value="Buscar" class="ch-btn ch-secondary" accesskey="b">
+				<input type="submit" value="Buscar" accesskey="b">
 			</form>
 				
 			<menu>
@@ -55,68 +97,41 @@
 					<li><a href="#">Ayuda</a></li>
 				</ul>
 			</nav>
-	
+
 		</header>
 		
 		<h2>Section Header</h2>
-		<header class="ch-header ch-path">
+		<header class="ch-header-section">
 			
 			<h1>Mi cuenta</h1>
 			
 			<nav>
-				<a class="ch-btn ch-primary ch-skin" href="http://homes-frontend.mercadolibre.com.ar">Inicio</a>
+				<a class="ch-btn-back" href="http://homes-frontend.mercadolibre.com.ar">Inicio</a>
 			</nav>
 			
 		</header>
 	
 		<h2>Action Header</h2>
-		<header class="ch-header ch-path ch-skin">
-			
+		<header class="ch-header-action">
 			<h1>Pregunta</h1>
 			
 			<nav>
-				<a class="ch-btn ch-secondary ch-skin" href="questions.html">Cancelar</a>
-				<a class="ch-btn ch-secondary ch-skin last makeAnswer" href="#">Responder</a>
+				<a class="ch-btn-action ch-btn-small" href="questions.html">Cancelar</a>
+				<a class="ch-btn-action ch-btn-last ch-btn-small makeAnswer" href="#">Responder</a>
 			</nav>
 			
 		</header>
 		
 		<div class="ch-layout" role="main">
-			
-			<div class="ch-box">
-				<h1>Header 1</h1> 
-				<h2>Header 2</h2> 
-				<h3>Header 3</h3> 
-				<h4>Header 4</h4> 
-				<h5>Header 5</h5> 
-				<h6>Header 6</h6>
-				<p>Paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-			</div>	
-		
-			<div class="ch-box"> 
-				<h2>Links</h2> 
-				<p><a href="http://www.mercadolibre.com">MercadoLibre</a></p> 
-				<p><a href="http://www.mercadopago.com">MercadoPago</a></p> 
-				<p><a href="http://www.mercadoshops.com">MercadoShops</a></p> 
-				<p><a href="http://www.mercadoclics.com">MercadoClics</a></p> 
-			</div> 
 		
 			<div class="ch-box"> 
 				<h2>Boxes</h2> 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">adipiscing</a>. Donec sit amet purus in sapien luctus sodales <a href="#">adipiscing</a>.</p>
 			</div>
 			
-			<div class="ch-box ch-skin"> 
+			<div class="ch-box-highlight">
 				<h2>Highlight Boxes</h2> 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">adipiscing</a>. Donec sit amet purus in sapien luctus sodales <a href="#">adipiscing</a>.</p>
-			</div> 
-		
-			<div class="ch-box">
-				<h2>Buttons</h2>
-				<form action=""> 
-					<input type="button" class="ch-btn ch-primary" value="Comprar">
-					<input type="button" class="ch-btn ch-skin" value="Mas preguntas">
-				</form>
 			</div>
 	
 			<div class="ch-box">
@@ -126,12 +141,14 @@
 				        <li><a href="#" data-categ-id="1743">Autos, Motos y Otros</a></li>
 				        <li><a href="#" data-categ-id="1459">Inmuebles</a></li>
 				        <li><a href="#" data-categ-id="1540">Servicios</a></li>
+				        <li>Computación</li>
+				        <li>Hogar</li>
 					</ul>
 				</nav>
 			</div>
 			
 			<div class="ch-box">
-				<h2>Dropdown</h2>
+				<h2>Expando</h2>
 				<div class="ch-expando">
 					<h3>Medios de envío</h3>
 					<ul class="ch-hide">
@@ -188,6 +205,20 @@
 					<textarea class cols="44" rows="2" name="question" placeholder="Escribe tu respuesta..."></textarea>
 				</form>
 			</div>
+
+			<div class="ch-box">
+				<h2>Transitions</h2>
+				<div class="ch-loading"></div>
+				<div class="ch-loading-wrap">
+					<div class="ch-loading">Cargando...</div>
+				</div>
+			</div>
+
+			<div class="ch-box">
+				<h2>Message Boxes</h2>
+				<p class="ch-message-error" data-icon="x">Oops! something went wrong</p>
+				<p class="ch-message-ok" data-icon="+">Everything is fine</p>
+			</div>
 			
 		</div>
 		
@@ -202,10 +233,10 @@
 	</div>
 
 	<div data-page="modal" id="modal" class="ch-hide" role="content">
-		<header class="ch-header ch-path ch-skin">
+		<header class="ch-header-action">
 			<h1>Pregunta</h1>
 			<nav>
-				<a class="ch-btn ch-secondary ch-skin last" href="#">Responder</a>
+				<a class="ch-btn-action ch-btn-small ch-btn-last" href="#">Responder</a>
 			</nav>
 		</header>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet purus in sapien luctus sodales. Curabitur dui velit, cursus in sagittis aliquam, dictum at neque. Ut gravida scelerisque lorem non pulvinar. Pellentesque et urna vitae nisl porta imperdiet sed nec ipsum. Sed non sem velit. Cras id consectetur tellus. Vestibulum posuere purus non enim pharetra vel vulputate eros hendrerit. Ut pulvinar placerat risus quis interdum. Mauris eget tempus risus. Aenean accumsan dolor in lorem elementum ac tincidunt urna rutrum. Sed sit amet nunc velit, vitae tincidunt ipsum. Fusce mattis elementum justo, et lacinia odio pharetra a. Donec egestas imperdiet eros a interdum. Suspendisse sodales, ligula vitae pulvinar aliquam, elit justo pretium urna, ut hendrerit arcu dolor vitae ipsum.</p>
@@ -216,7 +247,7 @@
 	<!-- Base js for all proyects // Change the namespaces -->
 	<script src="src/js/base.js"></script>
 	<!-- Wireless devices -->
-	<script src="libs/zepto.js"></script>
+	<script src="libs/zepto.min.js"></script>
 	<script src="libs/helper.js"></script>
 	<script src="src/js/chico-mobile.js"></script>
 	<script>
