@@ -101,7 +101,7 @@ h5 {
 
 .ch-price {
 	color: #900;
-	/*font-size: 1.53em;*/
+	font-size: 1.23em;
 	font-weight: bold;
 }
 
@@ -872,6 +872,10 @@ Cancel              		x                   content: 'x';
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	border-radius: 0;
+}
+.ch-header-form input[type="submit"]:focus,
+.ch-header-form input[type="submit"]:active {
+	width: 36px;
 }
 
 
