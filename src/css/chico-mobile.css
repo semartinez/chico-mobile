@@ -919,17 +919,16 @@ Cancel              		x                   content: 'x';
 	-webkit-border-radius: 0 4px 4px 0;
 	-moz-border-radius: 0 4px 4px 0;
 	-o-border-radius: 0 4px 4px 0;
-	font-size: 0;
 	margin: 0;
 	padding: 0;
 	position: absolute;
 	top: 0; right: 0;
-	text-align: right;
 }
 
 .ch-header menu li,
 .ch-header menu a {
-	display:inline-block;
+	display: block;
+	text-indent: -9999px;
 	width: 48px;
 	height: 44px;
 }
