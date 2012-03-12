@@ -101,14 +101,15 @@ h5 {
 
 .ch-price {
 	color: #900;
-	font-size: 1.23em;
+	font-size: 1.83em;
 	font-weight: bold;
 }
 
 .ch-price sup {
-	font-size: 0.52em;
-	vertical-align: text-top;
+	font-size: 0.62em;
+	vertical-align: text-middle;
 	line-height: 1em;
+	padding-left: 1px;
 }
 
 .ch-price span {
