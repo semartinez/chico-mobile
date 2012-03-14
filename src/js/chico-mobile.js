@@ -64,7 +64,9 @@ ch.mobile = ( function () {
 			var $toShow = toShow || $(this).next();
 			if ( $toShow.hasClass("ch-hide") ){
 				$toShow.removeClass("ch-hide");
+				$(this).addClass("ch-selected");
 			}else {
+				$(this).removeClass("ch-selected");
 				$toShow.addClass("ch-hide");
 			}
 		} );
@@ -133,6 +135,18 @@ ch.mobile = ( function () {
 
 			// Set scroll to top
 			window.scrollTo(0, 1);
+
+			//Change location hash
+            var hash = window.location.hash = "#!" + $content.attr("id");
+
+            window.onhashchange = function(){
+            	if(location.hash == "#!" + $content.attr("id")){
+            		show()
+            	}else {
+            		hide()
+            	}
+        	}
+
 		};
 		
 		var hide = function () {
@@ -142,6 +156,11 @@ ch.mobile = ( function () {
 
 			// Update scroll position
 			window.scrollTo(0, lastScroll);
+
+			//Change location hash
+			window.location.hash = "";
+			//unbind event on close
+            //$(window).unbind('hashchange');
 		}
 
 		// Creates close button and add behaivor
