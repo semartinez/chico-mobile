@@ -993,14 +993,15 @@ Cancel              		x                   content: 'x';
 	margin: 0 5px;
 }
 
-#navigation:before {
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
-	border-bottom: 15px solid #F4F4F4;
+#navigation::before {
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid #F4F4F4;
 	content: "";
 	position: absolute;
-	top: 48px; right: 12px;
-	z-index: -1;
+	top: 48px;
+	right: 19px;
+	z-index: 1;
 }
 
 
