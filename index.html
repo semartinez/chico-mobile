@@ -19,8 +19,7 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<link rel="stylesheet" href="src/css/normalize.css">
-
-	<link rel="stylesheet" href="src/css/chico-mobile.css?v=0.1" />
+	<link rel="stylesheet" href="src/css/chico-mobile.css" />
 
 	<!-- Active for phones -->
 	<link rel="stylesheet" media="only screen and (min-width: 240px)" href="src/css/mobile.css" />
@@ -31,49 +30,6 @@
 
 <body>
 	<div data-page="index" role="content">
-		<div class="box">
-			<h1>Titles</h1>
-			<h1>h1</h1>
-			<h2>h2</h2>
-			<h3>h3</h3>
-			<h4>h4</h4>
-			<h5>h5</h5>
-			<h6>h6</h6>
-		</div>
-
-		<div class="box">
-			<h2>Links</h2>
-			<p><a href="http://www.mercadolibre.com">MercadoLibre</a></p>
-			<p><a href="http://www.mercadopago.com">MercadoPago</a></p>
-			<p><a href="http://www.mercadoshops.com">MercadoShops</a></p>
-			<p><a href="http://www.mercadoclics.com">MercadoClics</a></p>
-		</div>
-
-		<div class="box clearfix">
-			<h2>Buttons</h2>
-			<p><a href="" class="ch-btn">Link button</a></p>
-			<p><a href="" class="ch-btn ch-btn-small">Link button</a></p>
-			<p><input type="button" class="ch-btn" value="Button"></p>
-			<p><input type="button" class="ch-btn ch-btn-small" value="Small button"></p>
-			<p><input type="button" class="ch-btn-skin" value="Skin button"></p>
-			<p><input type="button" class="ch-btn-skin ch-btn-small" value="Skin button"></p>
-			<p><input type="button" class="ch-btn-action" value="Action button"></p>
-			<p><input type="button" class="ch-btn-action ch-btn-small" value="Action button"></p>
-			<p><a class="ch-btn-action ch-btn-small" href="http://homes-frontend.mercadolibre.com.ar">Action Button</a></p>
-
-			<h2>Disable Buttons</h2>
-			<div><p class="ch-btn ch-btn-disabled">P button disabled</p></div>
-			<div><p class="ch-btn ch-btn-small ch-btn-disabled">P button disabled</p></div>
-			<p><a href="" class="ch-btn ch-btn-disabled">Link button disabled</a></p>
-			<p><a href="" class="ch-btn ch-btn-small ch-btn-disabled">Link button disabled</a></p>
-			<p><input type="button" class="ch-btn ch-btn-disabled" value="Button disabled" disabled></p>
-			<p><input type="button" class="ch-btn ch-btn-small ch-btn-disabled" value="Small button disabled" disabled></p>
-			<p><input type="button" class="ch-btn-skin ch-btn-disabled" value="Skin button disabled" disabled></p>
-			<p><input type="button" class="ch-btn-skin ch-btn-small ch-btn-disabled" value="Skin button disabled" disabled></p>
-			<p><input type="button" class="ch-btn-action ch-btn-disabled" disabled value="Action button"></p>
-			<p><input type="button" class="ch-btn-action ch-btn-small ch-btn-disabled" disabled value="Action button"></p>
-			<p><a class="ch-btn-action ch-btn-small ch-btn-disabled" href="http://homes-frontend.mercadolibre.com.ar">Action Button</a></p>
-		</div>
 
 		<h2>Global header</h2>
 	    <header class="ch-header">
@@ -83,11 +39,12 @@
 			
 			<form class="ch-form ch-header-form" action="http://listado.mercadolibre.com.ar" method="GET" role="search">
 				<input type="search" id="query" class="search" maxlength="60" name="q" autocomplete="off">
-				<input type="submit" value="Buscar" accesskey="b">
+				<!--input type="submit" value="Buscar" accesskey="b" class="icon-search"-->
+				<a href="#" title="Buscar" class="icon-search"></a>
 			</form>
 				
 			<menu>
-				<li class="ch-nav"><a class="ch-ico" href="#navigation">Menú</a></li>
+				<li class="ch-nav"><a class="icon-list" href="#navigation"><span>Menú</span></a></li>
 			</menu>
 	
 			<nav id="navigation" class="ch-hide" role="navigation">
@@ -120,10 +77,54 @@
 				<a class="ch-btn-action ch-btn-last ch-btn-small makeAnswer" href="#">Responder</a>
 			</nav>
 			
-		</header>
+		</header>		
 		
 		<div class="ch-layout" role="main">
 		
+			<div class="box">
+				<h1>Titles</h1>
+				<h1>h1</h1>
+				<h2>h2</h2>
+				<h3>h3</h3>
+				<h4>h4</h4>
+				<h5>h5</h5>
+				<h6>h6</h6>
+			</div>
+
+			<div class="box">
+				<h2>Links</h2>
+				<p><a href="http://www.mercadolibre.com">MercadoLibre</a></p>
+				<p><a href="http://www.mercadopago.com">MercadoPago</a></p>
+				<p><a href="http://www.mercadoshops.com">MercadoShops</a></p>
+				<p><a href="http://www.mercadoclics.com">MercadoClics</a></p>
+			</div>
+
+			<div class="box clearfix">
+				<h2>Buttons</h2>
+				<p><a href="" class="ch-btn">Link button</a></p>
+				<p><a href="" class="ch-btn ch-btn-small">Link button</a></p>
+				<p><input type="button" class="ch-btn" value="Button"></p>
+				<p><input type="button" class="ch-btn ch-btn-small" value="Small button"></p>
+				<p><input type="button" class="ch-btn-skin" value="Skin button"></p>
+				<p><input type="button" class="ch-btn-skin ch-btn-small" value="Skin button"></p>
+				<p><input type="button" class="ch-btn-action" value="Action button"></p>
+				<p><input type="button" class="ch-btn-action ch-btn-small" value="Action button"></p>
+				<p><a class="ch-btn-action ch-btn-small" href="http://homes-frontend.mercadolibre.com.ar">Action Button</a></p>
+
+				<h2>Disable Buttons</h2>
+				<div><p class="ch-btn ch-btn-disabled">P button disabled</p></div>
+				<div><p class="ch-btn ch-btn-small ch-btn-disabled">P button disabled</p></div>
+				<p><a href="" class="ch-btn ch-btn-disabled">Link button disabled</a></p>
+				<p><a href="" class="ch-btn ch-btn-small ch-btn-disabled">Link button disabled</a></p>
+				<p><input type="button" class="ch-btn ch-btn-disabled" value="Button disabled" disabled></p>
+				<p><input type="button" class="ch-btn ch-btn-small ch-btn-disabled" value="Small button disabled" disabled></p>
+				<p><input type="button" class="ch-btn-skin ch-btn-disabled" value="Skin button disabled" disabled></p>
+				<p><input type="button" class="ch-btn-skin ch-btn-small ch-btn-disabled" value="Skin button disabled" disabled></p>
+				<p><input type="button" class="ch-btn-action ch-btn-disabled" disabled value="Action button"></p>
+				<p><input type="button" class="ch-btn-action ch-btn-small ch-btn-disabled" disabled value="Action button"></p>
+				<p><a class="ch-btn-action ch-btn-small ch-btn-disabled" href="http://homes-frontend.mercadolibre.com.ar">Action Button</a></p>
+			</div>
+
 			<div class="ch-box"> 
 				<h2>Boxes</h2> 
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#">adipiscing</a>. Donec sit amet purus in sapien luctus sodales <a href="#">adipiscing</a>.</p>
@@ -148,10 +149,23 @@
 			</div>
 			
 			<div class="ch-box">
+				<h2>Lists icons</h2>
+				<nav>
+					<ul class="ch-list">
+				        <li class="icon-leaf"><a href="#" data-categ-id="1743">Autos, Motos y Otros</a></li>
+				        <li class="icon-random"><a href="#" data-categ-id="1459">Inmuebles</a></li>
+				        <li class="icon-bar-chart"><a href="#" data-categ-id="1540">Servicios</a></li>
+				        <li class="icon-pushpin">Computación</li>
+				        <li class="icon-upload">Hogar</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="ch-box">
 
 				<h2>Simple Expando</h2>
 				<div class="ch-expando">
-					<h3>Medios de envío</h3>
+					<h3 class="icon-chevron-down">Categorias</h3>
 					<nav class="ch-hide">
 						<ul class="ch-list">
 					        <li><a href="#" data-categ-id="1743">Autos, Motos y Otros</a></li>
@@ -160,12 +174,14 @@
 						</ul>
 					</nav>
 				</div>
+
 			</div>
+
 			<div class="ch-box">
 				<h2>Nested Expando</h2>
 				<ul class="ch-expando">
 					<li>
-						<h3>Medios de envío</h3>
+						<h3 class="icon-chevron-down">Listas de navegación</h3>
 						<nav class="ch-hide">
 							<ul class="ch-list">
 						        <li><a href="#" data-categ-id="1743">Autos, Motos y Otros</a></li>
@@ -175,7 +191,7 @@
 						</nav>
 					</li>
 					<li>
-						<h3>Medios de pago</h3>
+						<h3 class="icon-chevron-down">Listas simples</h3>
 						<ul class="ch-hide">
 							<li>A convenir con el vendedor</li>
 							<li>Capital Federal <span class="cost">$20</span></li>
@@ -185,14 +201,10 @@
 						</ul>
 					</li>
 					<li>
-						<h3>Medios de transporte</h3>
-						<ul class="ch-hide">
-							<li>A convenir con el vendedor</li>
-							<li>Capital Federal <span class="cost">$20</span></li>
-							<li>Gran Buenos Aires <span class="cost">$25</span></li>
-							<li>Interior de Buenos Aires <span class="cost">$40</span></li>
-							<li>Resto del país <span class="cost">$55</span></li>
-						</ul>
+						<h3 class="icon-chevron-down">Contenido plano</h3>
+						<p class="ch-hide ch-expando-content">
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						</p>
 					</li>
 				</ul>
 
@@ -247,8 +259,11 @@
 
 			<div class="ch-box">
 				<h2>Message Boxes</h2>
-				<p class="ch-message-error" data-icon="x">Oops! something went wrong</p>
-				<p class="ch-message-ok" data-icon="+">Everything is fine</p>
+				<p class="ch-message-help icon-question-sign">Do you need any help?</p>
+				<p class="ch-message-information icon-info-sign">Here's more information</p>
+				<p class="ch-message-error icon-remove">Oops! something went wrong</p>
+				<p class="ch-message-attention icon-warning-sign">Warning! be careful</p>
+				<p class="ch-message-ok icon-ok">Everything is fine</p>
 			</div>
 			
 			<div class="ch-box">
@@ -262,8 +277,152 @@
 				</ul>
 			</div>
 
+			<div class="box">
+				<h2>Icons</h2>
+				<ul class="the-icons">
+	                <li class="icon-search">icon-search</li>
+	                <li class="icon-envelope">icon-envelope</li>
+	                <li class="icon-heart">icon-heart</li>
+	                <li class="icon-star">icon-star</li>
+	                <li class="icon-star-empty">icon-star-empty</li>
+	                <li class="icon-user">icon-user</li>
+	                <li class="icon-film">icon-film</li>
+	                <li class="icon-th-large">icon-th-large</li>
+	                <li class="icon-th">icon-th</li>
+	                <li class="icon-th-list">icon-th-list</li>
+	                <li class="icon-ok">icon-ok</li>
+	                <li class="icon-remove">icon-remove</li>
+	                <li class="icon-zoom-in">icon-zoom-in</li>
+	                <li class="icon-zoom-out">icon-zoom-out</li>
+	                <li class="icon-off">icon-off</li>
+	                <li class="icon-signal">icon-signal</li>
+	                <li class="icon-cog">icon-cog</li>
+	                <li class="icon-trash">icon-trash</li>
+	                <li class="icon-home">icon-home</li>
+	                <li class="icon-file">icon-file</li>
+	                <li class="icon-time">icon-time</li>
+	                <li class="icon-road">icon-road</li>
+	                <li class="icon-download-alt">icon-download-alt</li>
+	                <li class="icon-download">icon-download</li>
+	                <li class="icon-upload">icon-upload</li>
+	                <li class="icon-inbox">icon-inbox</li>
+	                <li class="icon-play-circle">icon-play-circle</li>
+	                <li class="icon-repeat">icon-repeat</li>
+	                 <li class="icon-refresh">icon-refresh</li>
+	                <li class="icon-list-alt">icon-list-alt</li>
+	                <li class="icon-lock">icon-lock</li>
+	                <li class="icon-flag">icon-flag</li>
+	                <li class="icon-headphones">icon-headphones</li>
+	                <li class="icon-volume-off">icon-volume-off</li>
+	                <li class="icon-volume-down">icon-volume-down</li>
+	                <li class="icon-volume-up">icon-volume-up</li>
+	                <li class="icon-qrcode">icon-qrcode</li>
+	                <li class="icon-barcode">icon-barcode</li>
+	                <li class="icon-tag">icon-tag</li>
+	                <li class="icon-tags">icon-tags</li>
+	                <li class="icon-book">icon-book</li>
+	                <li class="icon-bookmark">icon-bookmark</li>
+	                <li class="icon-print">icon-print</li>
+	                <li class="icon-camera">icon-camera</li>
+	                <li class="icon-font">icon-font</li>
+	                <li class="icon-bold">icon-bold</li>
+	                <li class="icon-italic">icon-italic</li>
+	                <li class="icon-text-height">icon-text-height</li>
+	                <li class="icon-text-width">icon-text-width</li>
+	                <li class="icon-align-left">icon-align-left</li>
+	                <li class="icon-align-center">icon-align-center</li>
+	                <li class="icon-align-right">icon-align-right</li>
+	                <li class="icon-align-justify">icon-align-justify</li>
+	                <li class="icon-list">icon-list</li>
+	                <li class="icon-indent-left">icon-indent-left</li>
+	                <li class="icon-indent-right">icon-indent-right</li>
+	                <li class="icon-facetime-video">icon-facetime-video</li>
+	                <li class="icon-picture">icon-picture</li>
+	                <li class="icon-pencil">icon-pencil</li>
+	                <li class="icon-map-marker">icon-map-marker</li>
+	                <li class="icon-adjust">icon-adjust</li>
+	                <li class="icon-tint">icon-tint</li>
+	                <li class="icon-edit">icon-edit</li>
+	                <li class="icon-share">icon-share</li>
+	                <li class="icon-check">icon-check</li>
+	                <li class="icon-move">icon-move</li>
+	                <li class="icon-step-backward">icon-step-backward</li>
+	                <li class="icon-fast-backward">icon-fast-backward</li>
+	                <li class="icon-backward">icon-backward</li>
+	                <li class="icon-play">icon-play</li>
+	                <li class="icon-pause">icon-pause</li>
+	                <li class="icon-stop">icon-stop</li>
+	                <li class="icon-forward">icon-forward</li>
+	                <li class="icon-fast-forward">icon-fast-forward</li>
+	                <li class="icon-step-forward">icon-step-forward</li>
+	                <li class="icon-eject">icon-eject</li>
+	                <li class="icon-chevron-left">icon-chevron-left</li>
+	                <li class="icon-chevron-right">icon-chevron-right</li>
+	                <li class="icon-plus-sign">icon-plus-sign</li>
+	                <li class="icon-minus-sign">icon-minus-sign</li>
+	                <li class="icon-remove-sign">icon-remove-sign</li>
+	                <li class="icon-ok-sign">icon-ok-sign</li>
+	                <li class="icon-question-sign">icon-question-sign</li>
+	                <li class="icon-info-sign">icon-info-sign</li>
+	                <li class="icon-screenshot">icon-screenshot</li>
+	                <li class="icon-remove-circle">icon-remove-circle</li>
+	                <li class="icon-ok-circle">icon-ok-circle</li>
+	                <li class="icon-ban-circle">icon-ban-circle</li>
+	                <li class="icon-arrow-left">icon-arrow-left</li>
+	                <li class="icon-arrow-right">icon-arrow-right</li>
+	                <li class="icon-arrow-up">icon-arrow-up</li>
+	                <li class="icon-arrow-down">icon-arrow-down</li>
+	                <li class="icon-share-alt">icon-share-alt</li>
+	                <li class="icon-resize-full">icon-resize-full</li>
+	                <li class="icon-resize-small">icon-resize-small</li>
+	                <li class="icon-plus">icon-plus</li>
+	                <li class="icon-minus">icon-minus</li>
+	                <li class="icon-asterisk">icon-asterisk</li>
+	                <li class="icon-exclamation-sign">icon-exclamation-sign</li>
+	                <li class="icon-gift">icon-gift</li>
+	                <li class="icon-leaf">icon-leaf</li>
+	                <li class="icon-fire">icon-fire</li>
+	                <li class="icon-eye-open">icon-eye-open</li>
+	                <li class="icon-eye-close">icon-eye-close</li>
+	                <li class="icon-warning-sign">icon-warning-sign</li>
+	                <li class="icon-plane">icon-plane</li>
+	                <li class="icon-calendar">icon-calendar</li>
+	                <li class="icon-random">icon-random</li>
+	                <li class="icon-comment">icon-comment</li>
+	                <li class="icon-magnet">icon-magnet</li>
+	                <li class="icon-chevron-up">icon-chevron-up</li>
+	                <li class="icon-chevron-down">icon-chevron-down</li>
+	                <li class="icon-retweet">icon-retweet</li>
+	                <li class="icon-shopping-cart">icon-shopping-cart</li>
+	                <li class="icon-folder-close">icon-folder-close</li>
+	                <li class="icon-folder-open">icon-folder-open</li>
+	                <li class="icon-resize-vertical">icon-resize-vertical</li>
+	                <li class="icon-resize-horizontal">icon-resize-horizontal</li>
+	                <li class="icon-camera-retro">icon-camera-retro</li>
+	                <li class="icon-bar-chart">icon-bar-chart</li>
+	                <li class="icon-cogs">icon-cogs</li>
+	                <li class="icon-external-link">icon-external-link</li>
+	                <li class="icon-pushpin">icon-pushpin</li>
+	                <li class="icon-facebook-sign">icon-facebook-sign</li>
+	                <li class="icon-twitter-sign">icon-twitter-sign</li>
+	                <li class="icon-linkedin-sign">icon-linkedin-sign</li>
+	                <li class="icon-github-sign">icon-github-sign</li>
+	                <li class="icon-key">icon-key</li>
+	                <li class="icon-thumbs-up">icon-thumbs-up</li>
+	                <li class="icon-thumbs-down">icon-thumbs-down</li>
+	                <li class="icon-comments">icon-comments</li>
+	                <li class="icon-trophy">icon-trophy</li>
+	                <li class="icon-upload-alt">icon-upload-alt</li>
+	                <li class="icon-signin">icon-signin</li>
+	                <li class="icon-signout">icon-signout</li>
+	                <li class="icon-star-half">icon-star-half</li>
+	                <li class="icon-heart-empty">icon-heart-empty</li>
+	                <li class="icon-lemon">icon-lemon</li>
+	            </ul>
+			</div>
+
 		</div>
-		
+
 		<footer class="ch-footer">
 			<p class="nav-footer">
 				<a href="#" title="Ingresa a Mercadolibre">Ingresar</a>
