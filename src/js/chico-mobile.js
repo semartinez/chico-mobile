@@ -1,5 +1,5 @@
 /*
-* Chico Mobile 0.3.0 MIT Licence
+* Chico Mobile 0.4.0 MIT Licence
 * @autor <chico@mercadolibre.com>
 * @link http://www.chico-ui.com.ar
 * @team Hernan Mammana, Leandro Linares, Guillermo Paz, Natalia Devalle, Nicolas Brizuela
@@ -64,7 +64,10 @@ ch.mobile = ( function () {
 			var $toShow = toShow || $(this).next();
 			if ( $toShow.hasClass("ch-hide") ){
 				$toShow.removeClass("ch-hide");
+				$(this).addClass("ch-selected icon-chevron-up").removeClass("icon-chevron-down");
+
 			}else {
+				$(this).removeClass("ch-selected icon-chevron-up").addClass("icon-chevron-down");
 				$toShow.addClass("ch-hide");
 			}
 		} );
@@ -133,6 +136,18 @@ ch.mobile = ( function () {
 
 			// Set scroll to top
 			window.scrollTo(0, 1);
+
+			//Change location hash
+            var hash = window.location.hash = "#!" + $content.attr("id");
+
+            window.onhashchange = function(){
+            	if(location.hash == "#!" + $content.attr("id")){
+            		show()
+            	}else {
+            		hide()
+            	}
+        	}
+
 		};
 		
 		var hide = function () {
@@ -142,6 +157,11 @@ ch.mobile = ( function () {
 
 			// Update scroll position
 			window.scrollTo(0, lastScroll);
+
+			//Change location hash
+			window.location.hash = "";
+			//unbind event on close
+            //$(window).unbind('hashchange');
 		}
 
 		// Creates close button and add behaivor
