@@ -64,10 +64,10 @@ ch.mobile = ( function () {
 			var $toShow = toShow || $(this).next();
 			if ( $toShow.hasClass("ch-hide") ){
 				$toShow.removeClass("ch-hide");
-				$(this).addClass("ch-selected icon-chevron-up").removeClass("icon-chevron-down");
+				$(this).addClass("ch-selected ch-icon-chevron-up").removeClass("ch-icon-chevron-down");
 
 			}else {
-				$(this).removeClass("ch-selected icon-chevron-up").addClass("icon-chevron-down");
+				$(this).removeClass("ch-selected ch-icon-chevron-up").addClass("ch-icon-chevron-down");
 				$toShow.addClass("ch-hide");
 			}
 		} );
